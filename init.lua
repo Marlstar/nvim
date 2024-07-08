@@ -1,4 +1,4 @@
-vim.cmd.source("~/.vimrc")
+vim.cmd.source(".vimrc")
 
 -- lazy.nvim install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -25,6 +25,10 @@ require("lazy").setup({
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 
+    -- Theme
+    {"navarasu/onedark.nvim"},
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    
     { -- Treesitter 
         "nvim-treesitter/nvim-treesitter",
         build=":TSUpdate",
@@ -51,6 +55,10 @@ require("lazy").setup({
         end
     }
 })
+
+-- Theme
+require("onedark").setup{style="darker"}
+require("onedark").load()
 
 -- #=========== LSP ============# 
 local lsp_zero = require("lspconfig")
