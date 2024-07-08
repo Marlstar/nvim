@@ -1,5 +1,8 @@
 vim.cmd.source(".vimrc")
 
+
+
+
 -- lazy.nvim install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -24,7 +27,10 @@ require("lazy").setup({
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
-
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     -- Theme
     {"navarasu/onedark.nvim"},
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -101,3 +107,6 @@ lsp_zero.lua_ls.setup {
 
 -- python lsp
 lsp_zero.pyright.setup{}
+
+-- powerline (lualine)
+require('lualine').setup()
