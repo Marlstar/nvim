@@ -5,7 +5,7 @@ vim.cmd([[
 	set guioptions-=m
 	set guioptions-=T
 	set scrolloff=5
-	set number
+	set number 
 	set formatoptions=1
 	set smarttab
 	set wildmenu
@@ -24,3 +24,9 @@ vim.cmd([[
 
 vim.o.guifont = "MonaspiceAr Nerd Font"
 vim.g.guifont = "MonaspiceAr Nerd Font"
+vim.g.neovide_cursor_animate_command_line = false
+vim.g.neovide_cursor_animation_length = 0.08
+vim.g.neovide_cursor_trail_size = 0.5
+
+-- clear highlight search by pressing ESC in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

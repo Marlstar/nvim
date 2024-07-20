@@ -13,4 +13,5 @@ return {
     require("plugins.lualine"),
     require("plugins.nvim-cmp"),
     --require("plugins.nvim-cmp-snippy"),
+    require("plugins.hardtime")
 }
