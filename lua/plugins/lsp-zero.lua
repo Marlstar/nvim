@@ -49,6 +49,7 @@ M.config = function ()
 
     -- python lsp
     lsp_zero.pyright.setup{}
+
 end
 
 return M
