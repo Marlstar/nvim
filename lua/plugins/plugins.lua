@@ -9,10 +9,13 @@ return {
     require("plugins.nvim-cmp"),
     --require("plugins.nvim-cmp-snippy"),
     require("plugins.surround"),
+    require("plugins.comment"),
 
     -- UI
     require("plugins.barbar"),
     require("plugins.lualine"),
+    require("plugins.nvim-tree"),
+    require("plugins.indent-blankline"),
     -- Folding
     require("plugins.pretty-fold"),
 

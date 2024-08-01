@@ -26,5 +26,5 @@ vim.o.guifont = "MonaspiceAr Nerd Font"
 vim.g.guifont = "MonaspiceAr Nerd Font"
 require("neovide")
 
--- clear highlight search by pressing ESC in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+require("mappings")
