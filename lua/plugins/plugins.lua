@@ -6,6 +6,7 @@ return {
 
     -- Behaviour
     require("plugins.treesitter"),
+    require("plugins.coc"),
     require("plugins.nvim-cmp"),
     --require("plugins.nvim-cmp-snippy"),
     require("plugins.surround"),
@@ -27,4 +28,5 @@ return {
     -- Themes
     {"navarasu/onedark.nvim"},
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    require("themes.onehalf")
 }

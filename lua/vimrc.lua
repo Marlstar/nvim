@@ -26,5 +26,6 @@ vim.o.guifont = "MonaspiceAr Nerd Font"
 vim.g.guifont = "MonaspiceAr Nerd Font"
 require("neovide")
 
+vim.o.termguicolors = true
 
 require("mappings")
