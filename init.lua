@@ -1,7 +1,7 @@
 require("vimrc")
 
 -- plugins
-require("lazy-setup").setup()
+require("lazy-setup")
 
 -- Theme
 require('themes.onedark')
