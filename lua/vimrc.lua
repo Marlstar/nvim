@@ -19,6 +19,7 @@ vim.cmd([[
 	set ttyfast
 	set formatoptions=qrn1
 	set encoding=utf-8
+    set autoindent
 	set formatoptions-=cro
 ]])
 

@@ -18,7 +18,7 @@ return {
     require("plugins.nvim-tree"),
     require("plugins.indent-blankline"),
     -- Folding
-    require("plugins.pretty-fold"),
+    -- require("plugins.pretty-fold"),
 
     -- Practice stuff
     require("plugins.hardtime"),
