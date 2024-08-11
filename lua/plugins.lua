@@ -6,9 +6,8 @@ return {
 
     -- Behaviour
     require("plugins.treesitter"),
-    require("plugins.coc"),
+    -- require("plugins.coc"),
     require("plugins.nvim-cmp"),
-    --require("plugins.nvim-cmp-snippy"),
     require("plugins.surround"),
     require("plugins.comment"),
 

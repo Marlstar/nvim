@@ -8,7 +8,11 @@ local M = {
 		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
         -- Snippets
-		"L3MON4D3/LuaSnip",
+        {
+            "L3MON4D3/LuaSnip",
+            version = "v2.*",
+            build = "make install_jsregexp"
+        },
         "dcampos/nvim-snippy",
         "honza/vim-snippets",
         -- LSPs
@@ -41,9 +45,8 @@ M.config = function()
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
 			{ name = "luasnip" }, -- For luasnip users.
-            --{ name = "snippy" },
-			-- { name = "orgmode" },
-		}, {
+		},
+        {
 			{ name = "buffer" },
 			{ name = "path" },
 		}),
