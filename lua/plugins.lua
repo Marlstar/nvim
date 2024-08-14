@@ -23,6 +23,8 @@ return {
     require("plugins.hardtime"),
     require("plugins.vim-be-good"),
 
+    require("plugins.typst-preview"),
+
 
     -- Themes
     {"navarasu/onedark.nvim"},
