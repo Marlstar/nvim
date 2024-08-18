@@ -23,6 +23,7 @@ vim.cmd([[
 	set formatoptions-=cro
 ]])
 
+
 vim.o.guifont = "MonaspiceAr Nerd Font"
 vim.g.guifont = "MonaspiceAr Nerd Font"
 require("neovide")
@@ -30,3 +31,5 @@ require("neovide")
 vim.o.termguicolors = true
 
 require("mappings")
+-- require("autocmd")
+require("lsp.tinymist")
