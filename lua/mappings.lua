@@ -12,6 +12,10 @@ vim.g.mapleader = " "
 
 
 
+-- Make navigation keys work within line wraps
+map("n", "j", "gj")
+map("n", "k", "gk")
+
 -- Toggle tree
 map("n", "<leader>t", ":NvimTreeToggle<CR>")
 

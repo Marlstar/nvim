@@ -24,8 +24,8 @@ vim.cmd([[
 ]])
 
 
-vim.o.guifont = "MonaspiceAr Nerd Font"
-vim.g.guifont = "MonaspiceAr Nerd Font"
+vim.o.guifont = "Cascadia Code"
+vim.g.guifont = "Cascadia Code"
 require("neovide")
 
 vim.o.termguicolors = true

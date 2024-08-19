@@ -16,6 +16,7 @@ return {
     require("plugins.lualine"),
     require("plugins.nvim-tree"),
     require("plugins.indent-blankline"),
+    require("plugins.todo-comments"),
     -- Folding
     -- require("plugins.pretty-fold"),
 
