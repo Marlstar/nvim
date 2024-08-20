@@ -7,6 +7,7 @@ return {
     -- Behaviour
     require("plugins.treesitter"),
     -- require("plugins.coc"),
+    require("plugins.lspkind"),
     require("plugins.nvim-cmp"),
     require("plugins.surround"),
     require("plugins.comment"),
