@@ -28,8 +28,9 @@ M.config = function()
     cmp.setup({
         formatting = {
             format = lspkind.cmp_format({
+                mode = "symbol_text",
                 -- can also be a function to dynamically calculate max width such as 
-                maxwidth = function() return math.floor(0.5 * vim.o.columns) end,
+                maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
                 ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
                 show_labelDetails = true, -- show labelDetails in menu. Disabled by default
 
@@ -54,7 +55,9 @@ M.config = function()
             ["<C-f>"] = cmp.mapping.scroll_docs(4),
             ["<C-Space>"] = cmp.mapping.complete(),
             ["<C-e>"] = cmp.mapping.abort(),
-            ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+            ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+            ["<Tab>"] = cmp.mapping.select_next_item({ behaviour = "select" }),
+            ["<S-Tab>"] = cmp.mapping.select_prev_item({ behaviour = "select" }),
         }),
         sources = cmp.config.sources({
             { name = "nvim_lsp" },

@@ -18,6 +18,7 @@ return {
     require("plugins.nvim-tree"),
     require("plugins.indent-blankline"),
     require("plugins.todo-comments"),
+    require("plugins.hover"),
     -- Folding
     -- require("plugins.pretty-fold"),
 
