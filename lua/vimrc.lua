@@ -24,12 +24,12 @@ vim.cmd([[
 ]])
 
 
-vim.o.guifont = "Cascadia Code"
-vim.g.guifont = "Cascadia Code"
+local font = "JetbrainsMono Nerd Font"
+vim.o.guifont = font
+vim.g.guifont = font
+
 require("neovide")
 
 vim.o.termguicolors = true
 
 require("mappings")
--- require("autocmd")
-require("lsp.tinymist")
