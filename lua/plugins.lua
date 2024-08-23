@@ -8,6 +8,9 @@ return {
 
     -- Behaviour
     require("plugins.treesitter"),
+
+
+    require("plugins.telescope"),
     -- require("plugins.coc"),
     require("plugins.lspkind"),
     require("plugins.nvim-cmp"),
