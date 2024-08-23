@@ -1,4 +1,4 @@
 -- require("lspconfig").tinymist.setup {
-    -- exportPdf = "onType",
-    -- outputPath = "$root/$dir/$name"
+--     exportPdf = "onType",
+--     outputPath = "$root/$dir/$name"
 -- }

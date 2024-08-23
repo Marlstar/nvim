@@ -1,7 +1,4 @@
-local lsp = require("lsp.setup")
-
-lsp.lsp.rust_analyzer.setup{
-    capabilities = lsp.capabilities,
+require("lspconfig").rust_analyzer.setup{
     settings = {
         ["rust-analyzer"] = {
             highlight = {

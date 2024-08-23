@@ -1,7 +1,4 @@
-local lsp = require("lsp.setup")
-
-lsp.lsp.pyright.setup{
-    capabilities = lsp.capabilities,
+require("lspconfig").pyright.setup{
     settings = {
         python = {
             analysis = {

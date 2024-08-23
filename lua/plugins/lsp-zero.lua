@@ -36,10 +36,13 @@ M.config = function ()
     require("mason-lspconfig").setup({
         handlers = {
             function(server_name)
-                require("lspconfig")[server_name].setup({})
+                require("lspconfig")[server_name].setup({
+                    root_dir = function(fname) return vim.fn.getcwd() end,
+                })
             end,
 
             lua_ls = function() require("lsp.lua_ls") end,
+            -- tinymist = function() require("lsp.tinymist") end,
         },
     })
 end
