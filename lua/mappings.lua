@@ -3,7 +3,7 @@ local function map(mode, lhs, rhs, opts)
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  vim.keymap.set(mode, lhs, rhs, options)
 end
 ---------------------------------------------------------
 ---------------------------------------------------------
@@ -11,6 +11,11 @@ end
 vim.g.mapleader = " "
 
 
+-- Telescope
+map("n", "<leader>ff", ":Telescope find_files<CR>")
+map("n", "<leader>fg", ":Telescope live_grep<cr>")
+map("n", "<leader>fb", ":Telescope buffers<cr>")
+map("n", "<leader>fh", ":Telescope help_tags<cr>")
 
 -- Make navigation keys work within line wraps
 map("n", "j", "gj")
