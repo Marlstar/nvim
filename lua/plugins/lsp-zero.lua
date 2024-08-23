@@ -42,7 +42,7 @@ M.config = function ()
             end,
 
             lua_ls = function() require("lsp.lua_ls") end,
-            -- tinymist = function() require("lsp.tinymist") end,
+            tinymist = function() require("lsp.tinymist") end,
         },
     })
 end
