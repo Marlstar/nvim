@@ -1,5 +1,7 @@
 return {
     -- Plugins
+    -- Startup UI
+    require("plugins.alpha"),
 
     -- LSP
     require("plugins.lsp-zero"),
@@ -21,6 +23,7 @@ return {
     require("plugins.hover"),
     -- Folding
     -- require("plugins.pretty-fold"),
+    require("plugins.markview"),
 
     -- Practice stuff
     require("plugins.hardtime"),
