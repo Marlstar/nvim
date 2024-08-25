@@ -24,6 +24,7 @@ return {
     require("plugins.indent-blankline"),
     require("plugins.todo-comments"),
     require("plugins.hover"),
+	require("plugins.screenkey"),
     -- Folding
     -- require("plugins.pretty-fold"),
     require("plugins.markview"),

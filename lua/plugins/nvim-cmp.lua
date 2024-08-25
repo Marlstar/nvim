@@ -46,6 +46,8 @@ M.config = function()
                 require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
             end,
         },
+		preselect = cmp.PreselectMode.None,
+		completion = { completeopt = "menu,menuone,noselect" },
         window = {
             -- completion = cmp.config.window.bordered(),
             -- documentation = cmp.config.window.bordered(),
