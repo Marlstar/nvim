@@ -9,7 +9,6 @@ return {
     -- Behaviour
     require("plugins.treesitter"),
 
-
     require("plugins.telescope"),
     -- require("plugins.coc"),
     require("plugins.lspkind"),
@@ -35,9 +34,12 @@ return {
 
     require("plugins.typst-preview"),
 
+	-- Other
+	require("plugins.presence"),
 
     -- Themes
     {"navarasu/onedark.nvim"},
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    require("themes.onehalf")
+    require("themes.onehalf"),
+	require("themes.tokyonight"),
 }
