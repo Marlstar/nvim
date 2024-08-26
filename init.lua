@@ -4,4 +4,4 @@ require("vimrc")
 require("lazy-setup")
 
 -- Theme
-require('themes.onedark')
+vim.cmd("colorscheme tokyonight-moon")
