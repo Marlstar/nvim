@@ -15,8 +15,9 @@ local M = {
         },
         "dcampos/nvim-snippy",
         "honza/vim-snippets",
+
         -- LSPs
-        -- "zjp-CN/nvim-cmp-lsp-rs",
+        "zjp-CN/nvim-cmp-lsp-rs", -- Rust analyzer result filtering and sorting
     },
 }
 
