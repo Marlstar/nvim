@@ -6,7 +6,7 @@ return {
 		sk.setup({
 			win_opts = {
 				height = 1,
-				width = 30,
+				width = 20,
 				border = "rounded",
 			}
 		})
