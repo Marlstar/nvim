@@ -27,6 +27,7 @@ return {
     require("plugins.todo-comments"), -- TODO highlights
     require("plugins.hover"), -- LSP and diagnostic info on hover
 	require("plugins.screenkey"), -- Screenkeys overlay
+	require("plugins.notify"), -- Pretty, customisable notifications
     -- require("plugins.pretty-fold"),
 
 	-- Editing

@@ -10,6 +10,6 @@ return {
 				border = "rounded",
 			}
 		})
-		if not sk.is_active() then vim.cmd("Screenkey toggle") end
+		if sk.is_active() then vim.cmd("Screenkey toggle") end
 	end
 }
