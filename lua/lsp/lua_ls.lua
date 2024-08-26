@@ -25,7 +25,4 @@ require("lspconfig").lua_ls.setup {
     settings = {
         Lua = {}
     },
-	root_dir = function()
-		vim.fn.getcwd();
-	end
 }
