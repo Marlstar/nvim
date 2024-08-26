@@ -1,5 +1,4 @@
 return {
-    -- Plugins
     -- Startup UI
     require("plugins.alpha"),
 
@@ -9,37 +8,42 @@ return {
     -- Behaviour
     require("plugins.treesitter"),
 
+	-- UI and functionality
     require("plugins.telescope"),
-    -- require("plugins.coc"),
-    require("plugins.lspkind"),
+	-- Autocomplete menu
     require("plugins.nvim-cmp"),
+    require("plugins.lspkind"),
+
+	-- Functionality
     require("plugins.surround"),
     require("plugins.comment"),
+	require("plugins.boole"),
 
     -- UI
-    require("plugins.barbar"),
-    require("plugins.lualine"),
-    require("plugins.nvim-tree"),
-    require("plugins.indent-blankline"),
-    require("plugins.todo-comments"),
-    require("plugins.hover"),
-	require("plugins.screenkey"),
-    -- Folding
+    require("plugins.barbar"), -- Tabs
+    require("plugins.lualine"), -- Status line
+    require("plugins.nvim-tree"), -- File tree
+    require("plugins.indent-blankline"), -- Indent guides
+    require("plugins.todo-comments"), -- TODO highlights
+    require("plugins.hover"), -- LSP and diagnostic info on hover
+	require("plugins.screenkey"), -- Screenkeys overlay
     -- require("plugins.pretty-fold"),
-    require("plugins.markview"),
+
+	-- Editing
+    require("plugins.markview"), -- Live markdown previewing
+    require("plugins.typst-preview"), -- Live typst previewing
 
     -- Practice stuff
-    require("plugins.hardtime"),
-    require("plugins.vim-be-good"),
-
-    require("plugins.typst-preview"),
+    require("plugins.hardtime"), -- Force good habits
+    require("plugins.vim-be-good"), -- Practice motions and actions
 
 	-- Other
-	require("plugins.presence"),
+	require("plugins.presence"), -- Discord rich presence
 
     -- Themes
-    {"navarasu/onedark.nvim"},
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    require("themes.onehalf"),
+	require("plugins.themery"), -- Theme selector
+	require("themes.onedark"),
+	require("themes.catppuccin"),
 	require("themes.tokyonight"),
+	require("themes.flow"),
 }
