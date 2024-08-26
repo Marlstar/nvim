@@ -1,3 +1,5 @@
+vim.o.termguicolors = true -- 24 bit colour
+
 vim.o.expandtab = false -- Use spaces instead of tabs
 vim.o.ts = 4 -- How many spaces in a tab
 vim.o.sw = 4 -- How many spaces used during autoindent
@@ -15,12 +17,11 @@ vim.o.formatoptions = "qn1"
 vim.o.encoding = "UTF-8"
 vim.o.autoindent = true -- Auto-indent when making new lines
 
--- Status line
+-- Status line (only applies if lualine fails to load)
 vim.o.ruler = true -- Line and column numbers on the status line
 vim.o.showmode = true -- Show mode on the status line
 
-vim.opt.formatoptions:remove({"c", "r", "o"})
-
+vim.o.formatoptions = "qn1" -- :help fo-table
 
 local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
@@ -28,6 +29,5 @@ vim.g.guifont = font
 
 require("neovide")
 
-vim.o.termguicolors = true
 
 require("mappings")
