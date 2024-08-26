@@ -1,5 +1,4 @@
-require("onedark").setup{
-    style="darker",
+return {
+	"navarasu/onedark.nvim",
+	opts = { style = "cool" } -- dark | darker | cool | deep 
 }
-
-require("onedark").load()
