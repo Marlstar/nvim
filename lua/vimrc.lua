@@ -7,7 +7,7 @@ vim.o.scrolloff = 6 -- How many lines to keep above/below the cursor when scroll
 vim.o.number = true -- Line numbers
 vim.o.relativenumber = false -- Relative line numbers
 vim.o.smarttab = true -- Smart tab
-vim.o.wildmenu = true
+vim.o.wildmenu = true -- Show completion options in command mode
 vim.o.wildmode = "longest,full"
 vim.o.lbr = true -- Wrap at smart points rather than just the last character that fits
 vim.o.showmatch = false -- Briefly move to the matching bracket when closing it
@@ -31,6 +31,5 @@ vim.g.guifont = font
 -- External dependencies
 vim.g.sqlite_clib_path = "C:/users/marle/sqlite_dll/sqlite3.dll"
 
+-- Neovide-specific settings and actions
 require("neovide")
-
-require("mappings")

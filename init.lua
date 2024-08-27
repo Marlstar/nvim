@@ -1,4 +1,5 @@
 require("vimrc")
+require("mappings")
 
 -- plugins
 require("lazy-setup")
