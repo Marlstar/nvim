@@ -1,25 +1,19 @@
 return {
-    -- Startup UI
-    require("plugins.alpha"),
-
-    -- LSP
-    require("plugins.lsp-zero"),
-
-    -- Behaviour
-    require("plugins.treesitter"),
-
-	-- UI and functionality
-    require("plugins.telescope"),
-	-- Autocomplete menu
-    require("plugins.nvim-cmp"),
-    require("plugins.lspkind"),
+    require("plugins.alpha"), -- Startup UI
+    require("plugins.lsp-zero"), -- LSP
+    require("plugins.treesitter"), -- Core dependency for many plugins
 
 	-- Functionality
-    require("plugins.surround"),
-    require("plugins.comment"),
-	require("plugins.boole"),
+    require("plugins.surround"), -- Surround functionality
+    require("plugins.comment"), -- Comment lines, similar to the Ctrl+Comma in an IDE
+	require("plugins.boole"), -- Toggle booleans etc
+    -- require("plugins.pretty-fold"),
 
-    -- UI
+	-- UI
+    require("plugins.nvim-cmp"), -- Autocompletion menu
+    require("plugins.lspkind"), -- Icons for nvim-cmp
+
+    require("plugins.telescope"), -- UI and base plugin
     require("plugins.barbar"), -- Tabs
     require("plugins.lualine"), -- Status line
     require("plugins.nvim-tree"), -- File tree
@@ -28,7 +22,9 @@ return {
     require("plugins.hover"), -- LSP and diagnostic info on hover
 	require("plugins.screenkey"), -- Screenkeys overlay
 	require("plugins.notify"), -- Pretty, customisable notifications
-    -- require("plugins.pretty-fold"),
+
+	-- Miscellaneous
+	require("plugins.presence"), -- Discord rich presence
 
 	-- Editing
     require("plugins.markview"), -- Live markdown previewing
@@ -37,9 +33,6 @@ return {
     -- Practice stuff
     require("plugins.hardtime"), -- Force good habits
     require("plugins.vim-be-good"), -- Practice motions and actions
-
-	-- Other
-	require("plugins.presence"), -- Discord rich presence
 
     -- Themes
 	require("themes"),
