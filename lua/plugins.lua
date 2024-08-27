@@ -7,7 +7,6 @@ return {
     require("plugins.surround"), -- Surround functionality
     require("plugins.comment"), -- Comment lines, similar to the Ctrl+Comma in an IDE
 	require("plugins.boole"), -- Toggle booleans etc
-    -- require("plugins.pretty-fold"),
 	require("plugins.ufo"), -- Indent-based folds
 	require("plugins.inc-rename"), -- LSP renaming
 	require("plugins.autopairs"), -- Bracket autopairs
