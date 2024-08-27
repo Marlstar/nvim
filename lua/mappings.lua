@@ -13,9 +13,12 @@ vim.g.mapleader = " "
 
 -- Telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
-map("n", "<leader>fg", ":Telescope live_grep<cr>")
-map("n", "<leader>fb", ":Telescope buffers<cr>")
-map("n", "<leader>fh", ":Telescope help_tags<cr>")
+map("n", "<leader>fg", ":Telescope live_grep<CR>")
+map("n", "<leader>fb", ":Telescope buffers<CR>")
+map("n", "<leader>fh", ":Telescope help_tags<CR>")
+
+-- Neoclip (yank history)
+map("n", "<leader>y", ":Telescope neoclip<CR>")
 
 -- Make navigation keys work within line wraps
 map("n", "j", "gj")

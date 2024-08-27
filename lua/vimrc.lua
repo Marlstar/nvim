@@ -28,7 +28,9 @@ local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
 vim.g.guifont = font
 
-require("neovide")
+-- External dependencies
+vim.g.sqlite_clib_path = "C:/users/marle/sqlite_dll/sqlite3.dll"
 
+require("neovide")
 
 require("mappings")
