@@ -16,7 +16,7 @@ vim.o.cursorline = true -- Highlight the line that the cursor is on
 vim.o.encoding = "UTF-8"
 vim.o.autoindent = true -- Auto-indent when making new lines
 -- Due to the way neovim loads formatoptins, set it upon entering any buffer
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, { pattern = {"*"}, callback = function()
+vim.api.nvim_create_autocmd({"BufEnter","BufWinEnter"},{pattern={"*"},callback=function()
 	vim.o.formatoptions = "qn1"
 end})
 
