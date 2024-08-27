@@ -25,7 +25,7 @@ dashboard.section.buttons.val = {
     button("r", "", "Recent", ":Telescope oldfiles<CR>"),
     button("p", "󰏗", "Plugins", ":Lazy<CR>"),
     button("s", "", "Settings", ":cd $nvimdir | Telescope find_files<CR>"),
-    button("q", "", "Quit NVIM", ":qa<CR>"),
+    button("q", "󰈆", "Quit NVIM", ":qa<CR>"),
 }
 
 alpha.setup(dashboard.opts)
