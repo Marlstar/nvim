@@ -13,15 +13,16 @@ vim.o.lbr = true -- Wrap at smart points rather than just the last character tha
 vim.o.showmatch = false -- Briefly move to the matching bracket when closing it
 vim.o.wmh = 0 -- Minimum subwindow size
 vim.o.cursorline = true -- Highlight the line that the cursor is on
-vim.o.formatoptions = "qn1"
 vim.o.encoding = "UTF-8"
 vim.o.autoindent = true -- Auto-indent when making new lines
+-- Due to the way neovim loads formatoptins, set it upon entering any buffer
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, { pattern = {"*"}, callback = function()
+	vim.o.formatoptions = "qn1"
+end})
 
 -- Status line (only applies if lualine fails to load)
 vim.o.ruler = true -- Line and column numbers on the status line
 vim.o.showmode = true -- Show mode on the status line
-
-vim.o.formatoptions = "qn1" -- :help fo-table
 
 local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
