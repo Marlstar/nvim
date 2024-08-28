@@ -11,6 +11,7 @@ return {
 	require("plugins.inc-rename"), -- LSP renaming
 	require("plugins.autopairs"), -- Bracket autopairs
 	require("plugins.neoclip"), -- Recent yanks
+	require("plugins.treesj"), -- Smart splitting and joining
 
 	-- UI
     require("plugins.nvim-cmp"), -- Autocompletion menu
@@ -25,6 +26,8 @@ return {
     require("plugins.hover"), -- LSP and diagnostic info on hover
 	require("plugins.screenkey"), -- Screenkeys overlay
 	require("plugins.notify"), -- Pretty, customisable notifications
+	require("plugins.toggleterm"), -- Alternative terminal option
+	require("plugins.twilight"), -- Dimming of unfocused code sections
 
 	-- Miscellaneous
 	require("plugins.presence"), -- Discord rich presence

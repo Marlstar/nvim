@@ -20,9 +20,8 @@ vim.api.nvim_create_autocmd({"BufEnter","BufWinEnter"},{pattern={"*"},callback=f
 	vim.o.formatoptions = "qn1"
 end})
 
--- Status line (only applies if lualine fails to load)
+-- Status line (if lualine fails to load)
 vim.o.ruler = true -- Line and column numbers on the status line
-vim.o.showmode = true -- Show mode on the status line
 
 local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
