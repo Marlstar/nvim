@@ -1,7 +1,11 @@
 return {
     require("plugins.alpha"), -- Startup UI
     require("plugins.lsp-zero"), -- LSP
+	require("plugins.dap"), -- Debugging
     require("plugins.treesitter"), -- Core dependency for many plugins
+
+	-- Language-specific
+	require("plugins.lang.rust"),
 
 	-- Functionality
     require("plugins.surround"), -- Surround functionality
