@@ -1,3 +1,5 @@
+require("plugins.cmp-colours")
+
 local M = {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -28,19 +30,21 @@ M.config = function()
 
     cmp.setup({
         formatting = {
-            format = lspkind.cmp_format({
-                mode = "symbol_text",
-                -- can also be a function to dynamically calculate max width such as 
-                maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
-                ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-                show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+			fields = { "kind", "abbr" }, -- "menu" },
+			format = function (entry, vim_item)
+				local lspkind = require("lspkind").cmp_format({
+					mode = "symbol_text",
+					-- show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+					maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
+					ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+				})(entry, vim_item)
+				local strings = vim.split(lspkind.kind, "%s", { trimempty = true })
 
-                -- The function below will be called before any actual modifications from lspkind
-                -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-                before = function (entry, vim_item)
-                    return vim_item
-                end
-            })
+				lspkind.kind = " " .. (strings[1] or "") .. " "
+				lspkind.menu = "    (" .. (strings[2] or "") .. ")"
+
+				return lspkind
+			end,
         },
         snippet = {
             expand = function(args)
@@ -62,15 +66,17 @@ M.config = function()
             ["<Tab>"] = cmp.mapping.select_next_item({ behaviour = "select" }),
             ["<S-Tab>"] = cmp.mapping.select_prev_item({ behaviour = "select" }),
         }),
-        sources = cmp.config.sources({
-            { name = "nvim_lsp" },
-            { name = "nvim_lua" },
-            { name = "luasnip" }, -- For luasnip users.
-        },
+        sources = cmp.config.sources(
+			{
+				{ name = "nvim_lsp" },
+				{ name = "nvim_lua" },
+				{ name = "luasnip" }, -- For luasnip users.
+			},
             {
                 { name = "buffer" },
                 { name = "path" },
-            }),
+            }
+		),
     })
 
     cmp.setup.cmdline(":", {
