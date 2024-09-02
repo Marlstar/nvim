@@ -3,6 +3,7 @@ return {
     require("plugins.lsp-zero"), -- LSP
 	require("plugins.dap"), -- Debugging
     require("plugins.treesitter"), -- Core dependency for many plugins
+	require("plugins.nvim-web-devicons"), -- Icons
 
 	-- Language-specific
 	require("plugins.lang.rust"),
