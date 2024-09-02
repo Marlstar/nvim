@@ -11,6 +11,9 @@ map("n", "<leader>fh", ":Telescope help_tags<CR>")
 -- Neoclip (yank history)
 map("n", "<leader>y", ":Telescope neoclip<CR>")
 
+-- Open floating terminal
+map("n", "<C-`>", ":ToggleTerm direction=float<CR>")
+
 -- Make navigation keys work within line wraps
 map("n", "j", "gj")
 map("n", "k", "gk")

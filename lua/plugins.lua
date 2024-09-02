@@ -2,6 +2,7 @@ return {
     require("plugins.alpha"), -- Startup UI
     require("plugins.lsp-zero"), -- LSP
     require("plugins.treesitter"), -- Core dependency for many plugins
+	require("plugins.nvim-web-devicons"), -- Icons
 
 	-- Functionality
     require("plugins.surround"), -- Surround functionality
