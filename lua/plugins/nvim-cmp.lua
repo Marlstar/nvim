@@ -1,4 +1,3 @@
-require("plugins.cmp-colours")
 
 local M = {
     "hrsh7th/nvim-cmp",
@@ -22,6 +21,8 @@ local M = {
 }
 
 M.config = function()
+	require("plugins.cmp-colours")
+
     local cmp = require("cmp")
     local lspkind = require("lspkind")
     vim.opt.completeopt = { "menu", "menuone", "noselect" }
