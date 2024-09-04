@@ -1,4 +1,3 @@
-
 local M = {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -21,15 +20,12 @@ local M = {
 }
 
 M.config = function()
-	require("plugins.cmp-colours")
-
     local cmp = require("cmp")
-    local lspkind = require("lspkind")
     vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
     cmp.setup({
         formatting = {
-			fields = { "kind", "abbr" }, -- "menu" },
+			fields = { "kind", "abbr", "menu" },
 			format = function (entry, vim_item)
 				local lspkind = require("lspkind").cmp_format({
 					mode = "symbol_text",
@@ -53,10 +49,6 @@ M.config = function()
 		preselect = cmp.PreselectMode.None,
 		completion = { completeopt = "menu,menuone,noselect" },
         window = {
-            completion = cmp.config.window.bordered({
-				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-				border = "rounded",
-			}),
             -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
@@ -89,5 +81,4 @@ M.config = function()
 		),
     })
 end
-
 return M
