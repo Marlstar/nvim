@@ -17,6 +17,9 @@ return {
 	-- Commands
 	require("plugins.zoxide"), -- Alternative cd using zoxide
 
+	-- Code running
+	require("plugins.code-runner"),
+
 	-- UI
     require("plugins.nvim-cmp"), -- Autocompletion menu
     require("plugins.lspkind"), -- Icons for nvim-cmp
@@ -31,6 +34,7 @@ return {
 	require("plugins.screenkey"), -- Screenkeys overlay
 	require("plugins.notify"), -- Pretty, customisable notifications
 	require("plugins.toggleterm"), -- Alternative terminal option
+	require("plugins.betterterm"), -- VSCode-style terminal, used for code runner
 	require("plugins.twilight"), -- Dimming of unfocused code sections
 
 	-- Miscellaneous

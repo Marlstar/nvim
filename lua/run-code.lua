@@ -5,4 +5,6 @@ return function()
 		vim.cmd("Typst preview")
 		return
 	end
+
+	vim.cmd("RunCode")
 end
