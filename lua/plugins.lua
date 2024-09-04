@@ -18,6 +18,9 @@ return {
 	require("plugins.neoclip"), -- Recent yanks
 	require("plugins.treesj"), -- Smart splitting and joining
 
+	-- Commands
+	require("plugins.zoxide"), -- Alternative cd using zoxide
+
 	-- UI
     require("plugins.nvim-cmp"), -- Autocompletion menu
     require("plugins.lspkind"), -- Icons for nvim-cmp

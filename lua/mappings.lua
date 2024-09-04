@@ -11,6 +11,9 @@ map("n", "<leader>fh", ":Telescope help_tags<CR>")
 -- Neoclip (yank history)
 map("n", "<leader>y", ":Telescope neoclip<CR>")
 
+-- Code running
+map("n", "<F5>", require("run-code"))
+
 -- ToggleTerm
 map("n", "<C-\\>", ":ToggleTerm direction=float<CR>") -- Open floating terminal
 map("t", "<ESC>", [[<C-\><C-n>]])
