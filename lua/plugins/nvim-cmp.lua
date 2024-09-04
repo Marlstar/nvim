@@ -15,8 +15,6 @@ local M = {
             version = "v2.*",
             build = "make install_jsregexp"
         },
-        "dcampos/nvim-snippy",
-        "honza/vim-snippets",
 
         -- LSPs
         "zjp-CN/nvim-cmp-lsp-rs", -- Rust analyzer result filtering and sorting
@@ -54,7 +52,10 @@ M.config = function()
 		preselect = cmp.PreselectMode.None,
 		completion = { completeopt = "menu,menuone,noselect" },
         window = {
-            -- completion = cmp.config.window.bordered(),
+            completion = cmp.config.window.bordered({
+				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+				border = "rounded",
+			}),
             -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({

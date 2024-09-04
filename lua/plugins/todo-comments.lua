@@ -5,7 +5,7 @@ return {
 	opts = {
 		highlight = {
 			multiline = false,
-			keyword = "fg"
+			keyword = "bg"
 		}
 	}
 }
