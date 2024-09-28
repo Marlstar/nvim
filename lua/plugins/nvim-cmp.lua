@@ -49,6 +49,9 @@ M.config = function()
 		preselect = cmp.PreselectMode.None,
 		completion = { completeopt = "menu,menuone,noselect" },
         window = {
+			completion = {
+				side_padding = 0
+			}
             -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
