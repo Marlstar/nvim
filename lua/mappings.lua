@@ -22,6 +22,9 @@ map("t", "<C-w>", [[<C-\><C-n><C-w>]])
 -- Make navigation keys work within line wraps
 map("n", "j", "gj")
 map("n", "k", "gk")
+-- And instead make instant line movement explicit
+map("n", "gj", "j")
+map("n", "gk", "k")
 
 -- Toggle tree
 map("n", "<leader>t", ":NvimTreeToggle<CR>")
