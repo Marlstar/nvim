@@ -44,6 +44,7 @@ return {
 
 	-- Miscellaneous
 	require("plugins.presence"), -- Discord rich presence
+	require("plugins.leetcode"), -- Write and submit leetcode problems within neovim
 
 	-- Editing
     require("plugins.markview"), -- Live markdown previewing
