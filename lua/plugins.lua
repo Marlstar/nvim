@@ -45,6 +45,7 @@ return {
 	-- Miscellaneous
 	require("plugins.presence"), -- Discord rich presence
 	require("plugins.leetcode"), -- Write and submit leetcode problems within neovim
+	require("plugins.speedtyper"), -- Monkeytype-style typing practice
 
 	-- Editing
     require("plugins.markview"), -- Live markdown previewing
