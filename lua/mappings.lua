@@ -32,6 +32,7 @@ map("n", "<leader>t", ":NvimTreeToggle<CR>")
 -- Buffer navigation
 map("n", "<leader>bn", ":BufferNext<CR>")
 map("n", "<leader>bp", ":BufferPrevious<CR>")
+map("n", "<leader>x", ":bd<CR>") -- Close buffer
 
 -- Tabs
 map("n", "<C-1>", ":BufferGoto 1<CR>")

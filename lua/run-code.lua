@@ -2,7 +2,7 @@ return function()
 	local language = vim.bo.filetype;
 
 	if language == "typst" then
-		vim.cmd("Typst preview")
+		vim.cmd("TypstPreview")
 		return
 	end
 
