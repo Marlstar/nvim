@@ -1,4 +1,5 @@
 vim.o.termguicolors = true -- 24 bit colour
+vim.opt.mouse = "" -- Disable mouse
 
 vim.o.expandtab = false -- Use spaces instead of tabs
 vim.o.ts = 4 -- How many spaces in a tab
