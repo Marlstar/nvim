@@ -40,6 +40,7 @@ return {
 	require("plugins.notify"), -- Pretty, customisable notifications
 	require("plugins.toggleterm"), -- Alternative terminal option
 	require("plugins.betterterm"), -- VSCode-style terminal, used for code runner
+	require("plugins.here-term"), -- Terminal in the current buffer
 	require("plugins.twilight"), -- Dimming of unfocused code sections
 
 	-- Miscellaneous
