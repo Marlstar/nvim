@@ -31,7 +31,8 @@ return {
 
     require("plugins.telescope"), -- UI and base plugin
     require("plugins.barbar"), -- Tabs
-    require("plugins.lualine"), -- Status line
+    -- require("plugins.lualine"), -- Status line
+    require("plugins.heirline"), -- Status line
     require("plugins.nvim-tree"), -- File tree
     require("plugins.indent-blankline"), -- Indent guides
     require("plugins.todo-comments"), -- TODO highlights
