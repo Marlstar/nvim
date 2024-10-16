@@ -20,7 +20,7 @@ local FileIcon = {
 local FileName = {
 	provider = function (self)
 		-- Trim pattern relative to cwd
-		local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":~:.")
+		local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":.")
 		if filename == "" then return " [No Name] " end
 		-- If filename is longer than 1/4th of available space, trim
 		if not conditions.width_percent_below(#filename, 0.35) then
