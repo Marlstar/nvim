@@ -56,6 +56,9 @@ return {
     require("plugins.hardtime"), -- Force good habits
     require("plugins.vim-be-good"), -- Practice motions and actions
 
+	-- Games
+	require("plugins.tetris"),
+
     -- Themes
 	require("themes"),
 }
