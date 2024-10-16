@@ -35,6 +35,10 @@ map("n", "<leader>bp", ":BufferPrevious<CR>")
 map("n", "<leader>x", ":bd<CR>") -- Close buffer
 map("n", "<leader>X", ":bd!<CR>") -- Close buffer (force)
 
+-- Write buffer
+map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>W", ":w<CR>:bd<CR>") -- Write and close buffer
+
 -- Tabs
 map("n", "<C-1>", ":BufferGoto 1<CR>")
 map("n", "<C-2>", ":BufferGoto 2<CR>")
