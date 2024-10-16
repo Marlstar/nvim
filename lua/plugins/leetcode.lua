@@ -14,4 +14,5 @@ return {
     opts = {
 		lang = "rust",
     },
+	cmd = "Leet"
 }
