@@ -9,6 +9,9 @@ return {
 	-- Language-specific
 	require("plugins.lang.rust"),
 
+	-- Git
+	require("plugins.gitsigns"),
+
 	-- Functionality
     require("plugins.surround"), -- Surround functionality
     require("plugins.comment"), -- Comment lines, similar to the Ctrl+Comma in an IDE
