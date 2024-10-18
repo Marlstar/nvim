@@ -28,7 +28,7 @@ local FileName = {
 			filename = vim.fn.pathshorten(filename)
 		end
 
-		return filename
+		return filename .. " "
 	end,
 
 	hl = { fg = require("heirline.utils").get_highlight("Directory").fg }
@@ -52,7 +52,6 @@ local FileFlags = {
 local FileNameBlock = {
 	FileIcon,
 	FileName,
-	{ provider = " " }, -- Gap before other icons
 	FileFlags,
 	-- Cut the statusline here if there's not enough space
 	{ provider = "%<" },
