@@ -1,4 +1,5 @@
 local conditions = require("heirline.conditions")
+local get_hl = require("util.colour").get_hl
 
 -- Define children and add them later
 local FileIcon = {
@@ -6,7 +7,7 @@ local FileIcon = {
 		local filename = vim.api.nvim_buf_get_name(0)
 		local extension = vim.fn.fnamemodify(filename, ":e")
 		self.icon, self.icon_colour = require("nvim-web-devicons")
-			.get_icon_color(filename, extension)
+		.get_icon_color(filename, extension)
 	end,
 
 	provider = function (self)
@@ -23,7 +24,7 @@ local FileName = {
 		-- Trim pattern relative to cwd
 		local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":.")
 		if filename == "" then return " [No Name] " end
-		-- If filename is longer than 1/4th of available space, trim
+		-- If filename is longer than available space, trim
 		if not conditions.width_percent_below(#filename, 0.35) then
 			filename = vim.fn.pathshorten(filename)
 		end
@@ -31,7 +32,7 @@ local FileName = {
 		return filename .. " "
 	end,
 
-	hl = { fg = require("heirline.utils").get_highlight("Directory").fg }
+	hl = { fg = get_hl("Directory").fg }
 }
 
 local FileFlags = {
