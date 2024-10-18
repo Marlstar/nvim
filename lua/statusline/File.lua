@@ -1,4 +1,5 @@
 local conditions = require("heirline.conditions")
+
 -- Define children and add them later
 local FileIcon = {
 	init = function (self)
@@ -36,24 +37,26 @@ local FileName = {
 local FileFlags = {
 	{ -- File modified
 		condition = function() return vim.bo.modified end,
-		provider = "  ",
+		provider = " ",
 		hl = { fg = "green" }
 	},
 	{ -- Readonly
 		condition = function ()
 			return not vim.bo.modifiable or vim.bo.readonly
 		end,
-		provider = "  ",
+		provider = " ",
 		hl = { fg = "orange" }
-	}
+	},
 }
 
 local FileNameBlock = {
 	FileIcon,
 	FileName,
+	{ provider = " " }, -- Gap before other icons
 	FileFlags,
 	-- Cut the statusline here if there's not enough space
-	{ provider = "%<" }
+	{ provider = "%<" },
+	-- Trailing whitespace for spacing
 }
 
 return FileNameBlock
