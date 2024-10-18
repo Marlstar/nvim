@@ -1,3 +1,5 @@
+local get_hl = require("util.colour").get_hl
+
 local mode_names = {
     ["n"] = "NORMAL",
     ["no"] = "O-PENDING",
@@ -36,27 +38,25 @@ local mode_names = {
     ["!"] = "SHELL",
     ["t"] = "TERMINAL",
 }
-local gethl = require("util.colour").hl
-local getfg = require("util.colour").hl_fg
-local getbg = require("util.colour").hl_bg
+
 local mode_colors = {
-	NORMAL = { fg = "blue", bg = getbg("Normal") },
-	["O-PENDING"] = { fg = "blue", bg = getbg("Normal") },
-	INSERT = { fg = "green", bg = getbg("Normal") },
-	VISUAL = { fg = "purple", bg = getbg("Normal") },
-	["V-LINE"] = { fg = "purple", bg = getbg("Normal") },
-	["V-BLOCK"] = { fg = "purple", bg = getbg("Normal") },
-	SELECT = { fg = "purple", bg = getbg("Normal") },
-	["S-LINE"] = { fg = "purple", bg = getbg("Normal") },
-	["S-BLOCK"] = { fg = "purple", bg = getbg("Normal") },
-	REPLACE = { fg = "orange", bg = getbg("Normal") },
-	MORE = { fg = "orange", bg = getbg("Normal") },
-	["V-REPLACE"] = { fg = "orange", bg = getbg("Normal") },
-	COMMAND = { fg = "yellow", bg = getbg("Normal") },
-	EX = { fg = "yellow", bg = getbg("Normal") },
-	CONFIRM = { fg = "yellow", bg = getbg("Normal") },
-	SHELL = { fg = "yellow", bg = getbg("Normal") },
-	TERMINAL = { fg = "yellow", bg = getbg("Normal") },
+	NORMAL = { fg = "blue", bg = get_hl("Normal").bg },
+	["O-PENDING"] = { fg = "blue", bg = get_hl("Normal").bg },
+	INSERT = { fg = "green", bg = get_hl("Normal").bg },
+	VISUAL = { fg = "purple", bg = get_hl("Normal").bg },
+	["V-LINE"] = { fg = "purple", bg = get_hl("Normal").bg },
+	["V-BLOCK"] = { fg = "purple", bg = get_hl("Normal").bg },
+	SELECT = { fg = "purple", bg = get_hl("Normal").bg },
+	["S-LINE"] = { fg = "purple", bg = get_hl("Normal").bg },
+	["S-BLOCK"] = { fg = "purple", bg = get_hl("Normal").bg },
+	REPLACE = { fg = "orange", bg = get_hl("Normal").bg },
+	MORE = { fg = "orange", bg = get_hl("Normal").bg },
+	["V-REPLACE"] = { fg = "orange", bg = get_hl("Normal").bg },
+	COMMAND = { fg = "yellow", bg = get_hl("Normal").bg },
+	EX = { fg = "yellow", bg = get_hl("Normal").bg },
+	CONFIRM = { fg = "yellow", bg = get_hl("Normal").bg },
+	SHELL = { fg = "yellow", bg = get_hl("Normal").bg },
+	TERMINAL = { fg = "yellow", bg = get_hl("Normal").bg },
 }
 
 local ViMode = {
