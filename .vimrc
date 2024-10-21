@@ -4,7 +4,7 @@ set sw=4
 set guioptions-=m
 set guioptions-=T
 set scrolloff=5
-set number relativenumber 
+set number
 set formatoptions=1
 set smarttab
 set wildmenu
