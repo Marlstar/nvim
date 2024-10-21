@@ -38,7 +38,6 @@ local mode_names = {
     ["!"] = "SHELL",
     ["t"] = "TERMINAL",
 }
-
 local mode_colors = {
 	NORMAL = { fg = "blue", bg = get_hl("Normal").bg },
 	["O-PENDING"] = { fg = "blue", bg = get_hl("Normal").bg },

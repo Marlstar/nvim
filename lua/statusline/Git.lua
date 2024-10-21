@@ -1,4 +1,4 @@
-SHOW_BRANCH = true
+SHOW_BRANCH = function() return true end
 
 local conditions = require("heirline.conditions")
 
