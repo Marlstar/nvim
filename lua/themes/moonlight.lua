@@ -1,5 +1,6 @@
 return {
 	"shaunsingh/moonlight.nvim",
+	lazy = true,
 	config = function()
 		vim.g.moonlight_italic_comments = false
 		vim.g.moonlight_italic_keywords = true

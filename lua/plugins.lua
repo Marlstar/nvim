@@ -1,7 +1,10 @@
 return {
+    -- Themes
+	require("themes"),
+
     require("plugins.alpha"), -- Startup UI
     require("plugins.lsp-zero"), -- LSP
-	require("plugins.lazydev"),
+	require("plugins.lazydev"), -- Lua LSP optimisation
 	require("plugins.dap"), -- Debugging
     require("plugins.treesitter"), -- Core dependency for many plugins
 	require("plugins.nvim-web-devicons"), -- Icons
@@ -25,9 +28,6 @@ return {
 	-- Commands
 	require("plugins.zoxide"), -- Alternative cd using zoxide
 
-	-- Code running
-	require("plugins.code-runner"),
-
 	-- UI
     require("plugins.nvim-cmp"), -- Autocompletion menu
     require("plugins.lspkind"), -- Icons for nvim-cmp
@@ -43,7 +43,6 @@ return {
 	require("plugins.showkeys"), -- Screenkeys overlay
 	require("plugins.notify"), -- Pretty, customisable notifications
 	require("plugins.toggleterm"), -- Alternative terminal option
-	require("plugins.betterterm"), -- VSCode-style terminal, used for code runner
 	require("plugins.here-term"), -- Terminal in the current buffer
 	require("plugins.twilight"), -- Dimming of unfocused code sections
 
@@ -62,7 +61,4 @@ return {
 
 	-- Games
 	require("plugins.tetris"),
-
-    -- Themes
-	require("themes"),
 }

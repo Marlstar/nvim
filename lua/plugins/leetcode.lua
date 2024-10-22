@@ -1,5 +1,6 @@
 return {
     "kawre/leetcode.nvim",
+	cmd = "Leet",
     build = ":TSUpdate html",
     dependencies = {
         "nvim-telescope/telescope.nvim",
@@ -14,5 +15,4 @@ return {
     opts = {
 		lang = "rust",
     },
-	cmd = "Leet"
 }

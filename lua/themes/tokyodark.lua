@@ -1,5 +1,6 @@
 return {
 	"tiagovla/tokyodark.nvim",
+	lazy = true,
 	opts = {
 		transparent_background = false, -- set background to transparent
 		gamma = 1.00, -- adjust the brightness of the theme

@@ -8,9 +8,8 @@ return {
 				border = "rounded"
 			},
 			filetype = {
-				typst = function(...)
+				typst = function()
 					vim.cmd("TypstPreview")
-					return
 				end,
 
 				rust = "cargo run"

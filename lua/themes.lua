@@ -4,7 +4,6 @@ return {
 	require("themes.onedark"),
 	require("themes.catppuccin"),
 	require("themes.tokyonight"),
-	require("themes.flow"),
 	require("themes.tokyodark"),
 	require("themes.kanagawa"),
 	require("themes.cyberdream"),

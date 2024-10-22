@@ -1,3 +1,4 @@
 return {
-	"nanotee/zoxide.vim"
+	"nanotee/zoxide.vim",
+	cmd = { "Z", "Zi" }
 }

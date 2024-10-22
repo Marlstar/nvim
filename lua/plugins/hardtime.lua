@@ -1,6 +1,10 @@
 return {
     "m4xshen/hardtime.nvim",
-    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+	enabled = false,
+    dependencies = {
+		"MunifTanjim/nui.nvim",
+		"nvim-lua/plenary.nvim"
+	},
     opts = {
         restricted_keys = {
             ["h"] = {},
@@ -9,6 +13,4 @@ return {
             ["l"] = {},
         }
     },
-
-	enabled = false
 }

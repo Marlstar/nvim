@@ -1,5 +1,7 @@
 local M = {
     "hrsh7th/nvim-cmp",
+	event = { "InsertEnter", "CmdlineEnter" },
+
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-nvim-lua",
@@ -83,5 +85,7 @@ M.config = function()
 			{ { name = "cmdline" }, }
 		),
     })
+
+	require("plugins.cmp-colours")
 end
 return M

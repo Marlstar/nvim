@@ -1,5 +1,6 @@
 return {
     "jaimecgomezz/here.term",
+	event = "VeryLazy",
 	config = function ()
 		vim.opt.hidden = true
 		require("here-term").setup({
