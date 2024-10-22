@@ -40,7 +40,7 @@ return {
     require("plugins.indent-blankline"), -- Indent guides
     require("plugins.todo-comments"), -- TODO highlights
     require("plugins.hover"), -- LSP and diagnostic info on hover
-	-- require("plugins.screenkey"), -- Screenkeys overlay
+	require("plugins.showkeys"), -- Screenkeys overlay
 	require("plugins.notify"), -- Pretty, customisable notifications
 	require("plugins.toggleterm"), -- Alternative terminal option
 	require("plugins.betterterm"), -- VSCode-style terminal, used for code runner
