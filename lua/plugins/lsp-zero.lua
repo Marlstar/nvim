@@ -14,6 +14,12 @@ local lsp_attach = function (event)
     map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 end
 
+local ensure_installed_lsps = {
+	"rust-analyzer",
+	"lua-language-server",
+	"typst-lsp",
+}
+
 local M = {
 	{
 		'VonHeikemen/lsp-zero.nvim',
@@ -31,7 +37,7 @@ local M = {
 		cmd = { "LspInfo", "LspInstall", "LspStart" },
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{'williamboman/mason-lspconfig.nvim'},
+			{ 'williamboman/mason-lspconfig.nvim' },
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-nvim-lsp'},
 		},
@@ -57,6 +63,7 @@ local M = {
 
 			-- Set up LSPs
 			require("mason-lspconfig").setup({
+				ensure_installed = ensure_installed_lsps,
 				handlers = {
 					-- Default LSP setup
 					function(server_name)
