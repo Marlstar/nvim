@@ -11,6 +11,7 @@ return {
 
 	-- Language-specific
 	require("plugins.lang.rust"),
+	require("plugins.lang.java"),
 
 	-- Git
 	require("plugins.gitsigns"),

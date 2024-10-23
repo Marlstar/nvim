@@ -15,9 +15,10 @@ local lsp_attach = function (event)
 end
 
 local ensure_installed_lsps = {
-	"rust-analyzer",
-	"lua-language-server",
-	"typst-lsp",
+	"rust_analyzer",
+	"lua_ls",
+	"typst_lsp",
+	"jdtls",
 }
 
 local M = {
@@ -77,6 +78,7 @@ local M = {
 					tinymist = function() require("lsp.tinymist") end,
 					harper_ls = function() require("lsp.harper-ls") end,
 					typst_lsp = function() require("lsp.typst-lsp") end,
+					jdtls = function() --[[noop]] end,
 				},
 			})
 		end
