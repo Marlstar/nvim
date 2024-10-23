@@ -105,6 +105,7 @@ local function jdtls_on_attach(client, bufnr)
 	if features.codelens then enable_codelens(bufnr) end
 
 	-- keymaps here
+	require("mappings.lsp_attach")({buffer=bufnr})
 end
 
 -- Where jdtls is set up, executed every time you open a java file

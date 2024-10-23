@@ -7,7 +7,7 @@ local M = {
         "hrsh7th/cmp-nvim-lua",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
+        { "hrsh7th/cmp-cmdline", event = "CmdlineEnter" },
         "saadparwaiz1/cmp_luasnip",
         -- Snippets
         {
@@ -17,7 +17,7 @@ local M = {
         },
 
         -- LSPs
-        "zjp-CN/nvim-cmp-lsp-rs", -- Rust analyzer result filtering and sorting
+        { "zjp-CN/nvim-cmp-lsp-rs", ft = "rust" }, -- Rust analyzer result filtering and sorting
     },
 }
 
