@@ -2,6 +2,9 @@ return {
     -- Themes
 	require("themes"),
 
+	-- Wezterm stuff
+	require("plugins.wezterm-config"),
+
     require("plugins.alpha"), -- Startup UI
     require("plugins.lsp-zero"), -- LSP
 	require("plugins.lazydev"), -- Lua LSP optimisation

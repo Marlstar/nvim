@@ -33,3 +33,5 @@ vim.g.sqlite_clib_path = "C:/users/marle/sqlite_dll/sqlite3.dll"
 
 -- Neovide-specific settings and actions
 require("neovide")
+-- WezTerm-specific settings and actions
+require("wezterm")
