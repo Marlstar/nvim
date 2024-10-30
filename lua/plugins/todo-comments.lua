@@ -7,7 +7,13 @@ return {
 	opts = {
 		highlight = {
 			multiline = false,
-			keyword = "bg"
+			keyword = "wide_bg"
+		},
+		keywords = {
+			DONE = { icon = "", color = "DONE", alt = {"FINISHED", "COMPLETE"}}
+		},
+		colors = {
+			DONE = { "green", "DiffAdded", "#c3e88d" }
 		}
 	}
 }
