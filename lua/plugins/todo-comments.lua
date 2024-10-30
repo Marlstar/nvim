@@ -10,8 +10,8 @@ return {
 			keyword = "wide_bg"
 		},
 		keywords = {
-			DONE = { icon = "", color = "DONE", alt = {"FINISHED", "COMPLETE"}},
-			REVIEW = { icon = "", color = "REVIEW", alt = {"CHECK"}},
+			DONE = { icon = " ", color = "DONE", alt = {"FINISHED", "COMPLETE"}},
+			REVIEW = { icon = " ", color = "REVIEW", alt = {"CHECK"}},
 		},
 		colors = {
 			DONE = { "green", "DiffAdded", "#c3e88d" },
