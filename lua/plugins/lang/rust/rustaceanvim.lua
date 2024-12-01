@@ -14,6 +14,17 @@ return {
 		vim.g.rustaceanvim = {
 			dap = {
 				adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
+			},
+
+			-- LSP Settings
+			server = {
+				["rust-analyzer"] = {
+					diagnostics = {
+						disabled = {
+							"clippy::needless_return"
+						}
+					}
+				}
 			}
 		}
 	end
