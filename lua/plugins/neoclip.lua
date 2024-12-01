@@ -14,5 +14,10 @@ return {
 			enable_persistent_history = true,
 			default_register = "0",
 		})
+
+		-- Sneaky way to check if running in windows
+		if package.config:sub(1,1) == "\\" then
+			vim.g.sqlite_clib_path = "C:/users/marle/sqlite_dll/sqlite3.dll"
+		end
 	end,
 }
