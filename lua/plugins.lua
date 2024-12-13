@@ -20,6 +20,7 @@ return {
 	require("plugins.gitsigns"),
 
 	-- Functionality
+	require("plugins.suda"), -- Read and write as sudo
     require("plugins.surround"), -- Surround functionality
     require("plugins.comment"), -- Comment lines, similar to the Ctrl+Comma in an IDE
 	require("plugins.boole"), -- Toggle booleans etc
