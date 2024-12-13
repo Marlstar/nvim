@@ -7,7 +7,7 @@ end
 local ensure_installed_lsps = {
 	"rust_analyzer",
 	"lua_ls",
-	"typst_lsp",
+	"tinymist",
 	"jdtls",
 }
 
