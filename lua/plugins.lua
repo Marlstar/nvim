@@ -16,6 +16,8 @@ return {
 	require("plugins.lang.rust"),
 	require("plugins.lang.java"),
 
+	require("plugins.kdl"),
+
 	-- Git
 	require("plugins.gitsigns"),
 
