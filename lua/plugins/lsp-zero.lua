@@ -67,7 +67,6 @@ local M = {
 					lua_ls = function() require("lsp.lua_ls") end,
 					tinymist = function() require("lsp.tinymist") end,
 					harper_ls = function() require("lsp.harper-ls") end,
-					typst_lsp = function() require("lsp.typst-lsp") end,
 					rust_analyzer = function() --[[noop]] end,
 					jdtls = function() --[[noop]] end,
 				},
