@@ -52,6 +52,7 @@ return {
 	require("plugins.toggleterm"), -- Alternative terminal option
 	require("plugins.here-term"), -- Terminal in the current buffer
 	require("plugins.twilight"), -- Dimming of unfocused code sections
+	require("plugins.colorizer"), -- Highlight colors (hex codes etc)
 
 	-- Miscellaneous
 	require("plugins.presence"), -- Discord rich presence
