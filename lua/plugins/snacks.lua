@@ -34,6 +34,11 @@ return {
 		git = {
 			-- see config code
 		}
+
+		-- Git browse - show code in github/bitbucket/etc
+		gitbrowse = {
+			-- see config code
+		},
 	},
 
 	keys = {
