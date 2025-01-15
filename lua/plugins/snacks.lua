@@ -1,5 +1,5 @@
 -- Code to do stuff for certain modules
-require("util.snacks_module_config_code.lua")
+require("util.snacks_module_config_code")
 
 return {
     "folke/snacks.nvim",
@@ -33,11 +33,24 @@ return {
 		-- Git utilities
 		git = {
 			-- see config code
-		}
+		},
 
 		-- Git browse - show code in github/bitbucket/etc
 		gitbrowse = {
 			-- see config code
+		},
+		-- Indent lines
+		indent = {
+			enabled = true,
+			indent = {
+				char = "▎",
+			},
+			scope = {
+				char = "▎",
+			},
+			animate = {
+				enabled = false,
+			},
 		},
 	},
 
