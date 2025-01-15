@@ -20,6 +20,7 @@ return {
 				{ section = "startup" },
 			},
 		},
+
 		-- Pretty notifications
 		notifier = {
 			enabled = true,
@@ -35,9 +36,24 @@ return {
 				require("util.lsp_progress_notification")
 			end
 		},
+
+		-- Git utilities
+		git = {
+			config = function()
+				vim.api.nvim_create_user_command(
+					"GitBlame",
+					function() Snacks.git.blame_line() end,
+					{ nargs = 0 }
+				)
+			end
+		}
 	},
 
 	keys = {
+		-- BufDelete
 		{ "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete buffer" },
+		-- Notifier
+		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Show notification history" },
+		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
 	}
 }
