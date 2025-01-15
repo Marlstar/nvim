@@ -1,3 +1,6 @@
+-- Code to do stuff for certain modules
+require("util.snacks_module_config_code.lua")
+
 return {
     "folke/snacks.nvim",
     priority = 1000,
@@ -24,28 +27,12 @@ return {
 		-- Pretty notifications
 		notifier = {
 			enabled = true,
-			config = function()
-				-- :NotificationHistory
-				vim.api.nvim_create_user_command(
-					"NotificationHistory",
-					function() Snacks.notifier.show_history() end,
-					{ nargs = 0 }
-				)
-
-				-- LSP progress notifications
-				require("util.lsp_progress_notification")
-			end
+			-- see config code
 		},
 
 		-- Git utilities
 		git = {
-			config = function()
-				vim.api.nvim_create_user_command(
-					"GitBlame",
-					function() Snacks.git.blame_line() end,
-					{ nargs = 0 }
-				)
-			end
+			-- see config code
 		}
 	},
 
