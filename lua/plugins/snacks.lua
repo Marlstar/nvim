@@ -39,6 +39,7 @@ return {
 		gitbrowse = {
 			-- see config code
 		},
+
 		-- Indent lines
 		indent = {
 			enabled = true,
@@ -51,6 +52,11 @@ return {
 			animate = {
 				enabled = false,
 			},
+		},
+		
+		-- Nicer vim.input
+		input = {
+			enabled = true,
 		},
 	},
 
