@@ -74,6 +74,14 @@ return {
 		rename = {
 			-- see config code
 		},
+		
+		-- Smooth scroll
+		scroll = {
+			enabled = true,
+			animate = {
+				duration = { step = 15, total = 150 }
+			},
+		},
 	},
 
 	keys = {
