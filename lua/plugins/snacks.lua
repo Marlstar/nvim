@@ -64,6 +64,11 @@ return {
 			enabled = true
 			-- see config code
 		},
+
+		-- When opening from terminal, show files before loading plugins
+		quickfile = {
+			enabled = true,
+		},
 	},
 
 	keys = {
