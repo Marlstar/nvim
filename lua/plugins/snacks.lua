@@ -82,6 +82,11 @@ return {
 				duration = { step = 15, total = 150 }
 			},
 		},
+		
+		-- Status column
+		statuscolumn = {
+			enabled = true,
+		},
 	},
 
 	keys = {
