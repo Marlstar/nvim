@@ -27,3 +27,12 @@ vim.api.nvim_create_user_command(
 	function() Snacks.gitbrowse() end,
 	{ nargs = 0 }
 )
+
+---------------
+--  LazyGit  --
+---------------
+vim.api.nvim_create_user_command(
+	"LazyGit",
+	function() Snacks.lazygit.open() end,
+	{ nargs = 0 }
+)

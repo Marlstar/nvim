@@ -58,6 +58,12 @@ return {
 		input = {
 			enabled = true,
 		},
+
+		-- Lazygit integrated into neovim
+		lazygit = {
+			enabled = true
+			-- see config code
+		},
 	},
 
 	keys = {
@@ -66,5 +72,7 @@ return {
 		-- Notifier
 		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Show notification history" },
 		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
+		-- LazyGit
+		{ "<leader>lg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
 	}
 }
