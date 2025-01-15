@@ -20,6 +20,21 @@ return {
 				{ section = "startup" },
 			},
 		},
+		-- Pretty notifications
+		notifier = {
+			enabled = true,
+			config = function()
+				-- :NotificationHistory
+				vim.api.nvim_create_user_command(
+					"NotificationHistory",
+					function() Snacks.notifier.show_history() end,
+					{ nargs = 0 }
+				)
+
+				-- LSP progress notifications
+				require("util.lsp_progress_notification")
+			end
+		},
 	},
 
 	keys = {
