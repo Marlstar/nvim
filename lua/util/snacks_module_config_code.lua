@@ -36,3 +36,12 @@ vim.api.nvim_create_user_command(
 	function() Snacks.lazygit.open() end,
 	{ nargs = 0 }
 )
+
+----------------
+--   Rename   --
+----------------
+vim.api.nvim_create_user_command(
+	"RenameFile",
+	function() Snacks.rename.rename_file() end,
+	{ nargs = 0 }
+)

@@ -69,6 +69,11 @@ return {
 		quickfile = {
 			enabled = true,
 		},
+
+		-- LSP file renaming
+		rename = {
+			-- see config code
+		},
 	},
 
 	keys = {
