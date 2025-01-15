@@ -1,3 +1,5 @@
+require("vimrc")
+
 require("lazy.install")
 
 vim.g.mapleader = " "
