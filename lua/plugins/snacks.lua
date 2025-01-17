@@ -116,6 +116,15 @@ return {
 
 	init = function()
 		----------------
+		--    Dash    --
+		----------------
+		vim.api.nvim_create_user_command(
+			"Dash",
+			function() Snacks.dashboard.open() end,
+			{ nargs = 0 }
+		)
+
+		----------------
 		--  Notifier  --
 		----------------
 		vim.api.nvim_create_user_command(
