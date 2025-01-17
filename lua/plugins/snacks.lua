@@ -101,6 +101,7 @@ return {
 	keys = {
 		-- BufDelete
 		{ "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete buffer" },
+		{ "<leader>x", function() Snacks.bufdelete() end, desc = "Delete buffer" },
 		-- Notifier
 		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Show notification history" },
 		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
