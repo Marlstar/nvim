@@ -3,7 +3,8 @@ return {
 	event = "InsertEnter",
 	dependencies = "rafamadriz/friendly-snippets",
 	opts = {
-		friendly_snippets = true
+		friendly_snippets = true,
+		create_cmp_source = true
 	},
 	keys = {
 		{
