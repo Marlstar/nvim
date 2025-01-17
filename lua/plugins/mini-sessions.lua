@@ -10,14 +10,14 @@ return {
 		vim.api.nvim_create_user_command(
 			"SessionCreate",
 			function(opts)
-				MiniSessions.write(opts)
+				MiniSessions.write(opts.fargs[1])
 			end,
 			{ nargs = 1 }
 		)
 		vim.api.nvim_create_user_command(
 			"SessionDelete",
 			function(opts)
-				MiniSessions.delete(opts)
+				MiniSessions.delete(opts.fargs[1])
 			end,
 			{ nargs = 1 }
 		)
@@ -31,7 +31,7 @@ return {
 		vim.api.nvim_create_user_command(
 			"SessionLoad",
 			function(opts)
-				MiniSessions.read(opts)
+				MiniSessions.read(opts.fargs[1])
 			end,
 			{
 				nargs = 1,

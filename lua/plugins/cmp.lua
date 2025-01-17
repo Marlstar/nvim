@@ -126,6 +126,11 @@ return {
 			}, {
 				{ name = "buffer" },
 			}),
+			snippet = {
+				expand = function(args)
+					vim.snippet.expand(args.body)
+				end
+			},
 			experimental = {
 				ghost_text = false
 			},
