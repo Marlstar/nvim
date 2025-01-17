@@ -89,6 +89,13 @@ return {
 		statuscolumn = {
 			enabled = true,
 		},
+
+		-- Terminal
+		terminal = {
+			keys = {
+				{ "<C-\\>", function() Snacks.terminal.toggle(nil, {win={position="float"}}) end},
+			}
+		}
 	},
 
 	keys = {
@@ -102,6 +109,8 @@ return {
 		-- Scratch
 		{ "<leader>sn", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
 		{ "<leader>ss", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
+		-- Terminal
+		{ "<C-\\>", function() Snacks.terminal.toggle(nil, {win={position="float"}}) end, mode = {"n","t"}, desc = "Toggle popup terminal" },
 	},
 
 	init = function()
