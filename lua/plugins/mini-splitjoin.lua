@@ -1,7 +1,14 @@
 return {
 	"echasnovski/mini.splitjoin",
 	version = "*",
-	config = function()
-		require("mini.splitjoin").setup()
+	opts = {
+		mappings = {
+			toggle = "<leader>j",
+			split = "",
+			join = ""
+		}
+	},
+	config = function(_, opts)
+		require("mini.splitjoin").setup(opts)
 	end
 }
