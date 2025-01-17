@@ -1,6 +1,4 @@
 -- Code to do stuff for certain modules
-require("util.snacks_module_config_code")
-
 return {
     "folke/snacks.nvim",
     priority = 1000,
@@ -97,5 +95,55 @@ return {
 		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
 		-- LazyGit
 		{ "<leader>lg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
-	}
+	},
+
+	init = function()
+		----------------
+		--  Notifier  --
+		----------------
+		vim.api.nvim_create_user_command(
+			"NotificationHistory",
+			function() Snacks.notifier.show_history() end,
+			{ nargs = 0 }
+		)
+
+		-- LSP progress notifications
+		require("util.lsp_progress_notification")
+
+		---------------
+		--    Git    --
+		---------------
+		vim.api.nvim_create_user_command(
+			"GitBlame",
+			function() Snacks.git.blame_line() end,
+			{ nargs = 0 }
+		)
+
+		-----------------
+		--  GitBrowse  --
+		-----------------
+		vim.api.nvim_create_user_command(
+			"GitBrowse",
+			function() Snacks.gitbrowse() end,
+			{ nargs = 0 }
+		)
+
+		---------------
+		--  LazyGit  --
+		---------------
+		vim.api.nvim_create_user_command(
+			"LazyGit",
+			function() Snacks.lazygit.open() end,
+			{ nargs = 0 }
+		)
+
+		----------------
+		--   Rename   --
+		----------------
+		vim.api.nvim_create_user_command(
+			"RenameFile",
+			function() Snacks.rename.rename_file() end,
+			{ nargs = 0 }
+		)
+	end
 }

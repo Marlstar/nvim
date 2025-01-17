@@ -16,7 +16,7 @@ return {
 	},
 	config = function(_, opts)
 		local cmp = require("cmp")
-		
+
 		cmp.setup(opts)
 
 		cmp.setup.cmdline(':', {

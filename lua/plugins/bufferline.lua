@@ -3,21 +3,18 @@ return {
 	version = "*",
 	lazy = false,
 	dependencies = "nvim-tree/nvim-web-devicons",
-	config = function()
-		require("bufferline").setup({
-			options = {
-				mode = "buffers",
-				themable = false, -- use colourscheme colours
-				separator_style = "slant",
-				numbers = "none",
-				max_name_length = 25,
-				indicator = {
-					style = "icon"
-				},
-			}
-		})
-	end,
-
+	opts = {
+		options = {
+			mode = "buffers",
+			themable = false, -- use colourscheme colours
+			separator_style = "slant",
+			numbers = "none",
+			max_name_length = 25,
+			indicator = {
+				style = "icon"
+			},
+		}
+	},
 	keys = {
 		{ "<leader>bn", ":BufferLineCycleNext<CR>", desc = "Next tab" },
 		{ "<leader>bp", ":BufferLineCyclePrev<CR>", desc = "Previous tab" },

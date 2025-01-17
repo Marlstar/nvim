@@ -1,11 +1,10 @@
 return {
 	'echasnovski/mini.sessions',
 	version = '*',
-	config = function()
-		require("mini.sessions").setup({
-			directory = vim.fn.stdpath("data") .. "/sessions"
-		})
-
+	opts = {
+		directory = vim.fn.stdpath("data") .. "/sessions"
+	},
+	init = function()
 		-- Commands to manage sessions, rather than having to type lua manually
 		vim.api.nvim_create_user_command(
 			"SessionCreate",

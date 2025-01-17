@@ -11,9 +11,7 @@ local default_server_opts = {
 return {
 	{
 		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end
+		opts = {}
 	},
 	{
 		"neovim/nvim-lspconfig",
