@@ -4,7 +4,6 @@ return {
     priority = 1000,
     lazy = false,
     dependencies = "nvim-tree/nvim-web-devicons",
-    ---@type snacks.Config
     opts = {
 		-- Home dashboard
 		dashboard = {
@@ -51,7 +50,7 @@ return {
 				enabled = false,
 			},
 		},
-		
+
 		-- Nicer vim.input
 		input = {
 			enabled = true,
@@ -72,7 +71,7 @@ return {
 		rename = {
 			-- see config code
 		},
-		
+
 		-- Smooth scroll
 		scroll = {
 			enabled = true,
@@ -80,7 +79,7 @@ return {
 				duration = { step = 15, total = 150 }
 			},
 		},
-		
+
 		-- Status column
 		statuscolumn = {
 			enabled = true,
