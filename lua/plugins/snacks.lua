@@ -72,6 +72,11 @@ return {
 			-- see config code
 		},
 
+		-- Scratch buffers
+		scratch = {
+			enabled = true,
+		},
+
 		-- Smooth scroll
 		scroll = {
 			enabled = true,
@@ -94,6 +99,9 @@ return {
 		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
 		-- LazyGit
 		{ "<leader>lg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
+		-- Scratch
+		{ "<leader>sn", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+		{ "<leader>ss", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
 	},
 
 	init = function()
