@@ -9,3 +9,4 @@ require("lazy.run")
 
 vim.cmd("colorscheme tokyonight-moon")
 require("mappings")
+require("wsl")
