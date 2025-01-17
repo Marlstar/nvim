@@ -9,6 +9,12 @@ return {
 				n = {
 					["q"] = require("telescope.actions").close
 				}
+			},
+
+			extensions = {
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown{}
+				}
 			}
 		},
 		keys = {
@@ -26,6 +32,15 @@ return {
 				function() require("telescope.builtin").colorscheme() end,
 				{ nargs = 0 }
 			)
+		end
+	},
+
+	-- PLUGINS
+	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		dependencies = "nvim-telescope/telescope.nvim",
+		config = function()
+			require("telescope").load_extension("ui-select")
 		end
 	}
 }
