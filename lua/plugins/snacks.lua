@@ -108,6 +108,12 @@ return {
 			keys = {
 				{ "<C-\\>", function() Snacks.terminal.toggle(nil, {win={position="float"}}) end},
 			}
+		},
+
+		-- Toggle
+		toggle = {
+			which_key = true,
+			notify = true,
 		}
 	},
 
