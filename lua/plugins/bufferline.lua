@@ -16,9 +16,9 @@ return {
 		}
 	},
 	keys = {
-		{ "<leader>bn", ":BufferLineCycleNext<CR>", desc = "Next tab" },
-		{ "<leader>bp", ":BufferLineCyclePrev<CR>", desc = "Previous tab" },
-		{ "<leader>bmn", ":BufferLineMoveNext<CR>", desc = "Move tab right" },
-		{ "<leader>bmp", ":BufferLineMovePrev<CR>", desc = "Move tab left" },
+		{ "<leader>bn", ":BufferLineCycleNext<CR>", desc = "Next tab", silent = true },
+		{ "<leader>bp", ":BufferLineCyclePrev<CR>", desc = "Previous tab", silent = true },
+		{ "<leader>bmn", ":BufferLineMoveNext<CR>", desc = "Move tab right", silent = true },
+		{ "<leader>bmp", ":BufferLineMovePrev<CR>", desc = "Move tab left", silent = true },
 	}
 }
