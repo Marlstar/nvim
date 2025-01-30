@@ -18,7 +18,16 @@ return {
 			function(opts)
 				MiniSessions.delete(opts.fargs[1])
 			end,
-			{ nargs = 1 }
+			{
+				nargs = 1,
+				complete = function(ArgLead, CmdLine, CursorPos)
+					local sessions = {}
+					for key,_ in pairs(MiniSessions.detected) do
+						table.insert(sessions, key)
+					end
+					return sessions
+				end
+			}
 		)
 		vim.api.nvim_create_user_command(
 			"Sessions",
