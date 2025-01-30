@@ -7,6 +7,19 @@ return {
     opts = {
 		-- Home dashboard
 		dashboard = {
+			preset = {
+				keys = {
+					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+					{ icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+					{ icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+					{ icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
+					{ icon = " ", key = "S", desc = "Sessions", action = ":Sessions" },
+					{ icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
+				}
+			},
 			sections = {
 				{
 					section = "terminal",
@@ -14,7 +27,7 @@ return {
 					height = 17,
 					padding = 1,
 					-- remove the image if it takes up too much space
-					enabled = function () return vim.api.nvim_win_get_height(0) >= 35 end
+					enabled = function () return vim.api.nvim_win_get_height(0) >= 37 end
 				},
 				{ section = "keys", gap = 1, padding = 1 },
 				{ section = "startup" },
