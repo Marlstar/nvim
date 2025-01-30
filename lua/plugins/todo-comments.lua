@@ -1,13 +1,12 @@
 return {
-	-- TODO test
 	"folke/todo-comments.nvim",
 	event = "VeryLazy",
+	dependencies = "nvim-lua/plenary.nvim",
 
-	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {
 		highlight = {
 			multiline = false,
-			keyword = "wide_bg"
+			keyword = "wide_bg",
 		},
 		keywords = {
 			DONE = { icon = " ", color = "DONE", alt = {"FINISHED", "COMPLETE"}},
@@ -17,5 +16,9 @@ return {
 			DONE = { "green", "DiffAdded", "#c3e88d" },
 			REVIEW = { "blue", "MiniIconsBlue", "#82aaff" }
 		}
+	},
+
+	keys = {
+		{ "<leader>ft", ":TodoTelescope<CR>", desc = "Todo-Comments Telescope", silent = true }
 	}
 }

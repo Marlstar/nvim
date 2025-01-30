@@ -27,8 +27,3 @@ vim.o.ruler = true -- Line and column numbers on the status line
 local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
 vim.g.guifont = font
-
--- Neovide-specific settings and actions
-require("neovide")
--- WezTerm-specific settings and actions
-require("wezterm")

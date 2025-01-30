@@ -1,10 +1,12 @@
 require("vimrc")
-require("mappings")
 
--- plugins
-require("lazy-setup")
+require("lazy.install")
 
--- Theme
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("lazy.run")
+
 vim.cmd("colorscheme tokyonight-moon")
-
-require("plugins.cmp-colours")
+require("mappings")
+require("wsl")
