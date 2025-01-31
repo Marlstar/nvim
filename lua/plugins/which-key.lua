@@ -8,7 +8,7 @@ return {
 		win = {
 			wo = {
 				-- Transparency
-				winblend = 50
+				-- winblend = 50
 			}
 		}
 	},
