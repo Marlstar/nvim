@@ -17,12 +17,11 @@ return {
 
 		config = function(_, opts)
 			require("typst-preview").setup(opts)
-			vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+			vim.api.nvim_create_autocmd("FileType", {
 				pattern = { "*.typ" },
 				callback = function()
-					-- vim.cmd("set sw=4")
-					-- vim.cmd("set tw=4")
-					require("vimrc")
+					vim.cmd("set sw=4")
+					vim.cmd("set tw=4")
 				end,
 				desc = "Reset tw and sw when entering typst files"
 			})
