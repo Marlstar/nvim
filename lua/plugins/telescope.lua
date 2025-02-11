@@ -18,13 +18,13 @@ return {
 			}
 		},
 		keys = {
-			{ "<leader>ff", require("telescope.builtin").find_files },
-			{ "<leader>fg", require("telescope.builtin").live_grep },
-			{ "<leader>fz", require("telescope.builtin").current_buffer_fuzzy_find },
-			{ "<leader>fd", require("telescope.builtin").diagnostics },
-			{ "<leader>fb", require("telescope.builtin").buffers },
-			{ "<leader>fh", require("telescope.builtin").highlights },
-			{ "<leader>fm", require("telescope.builtin").marks },
+			{ "<leader>ff", require("telescope.builtin").find_files, desc = "Telescope find_files" },
+			{ "<leader>fg", require("telescope.builtin").live_grep, desc = "Telescope live_grep" },
+			{ "<leader>fz", require("telescope.builtin").current_buffer_fuzzy_find, desc = "Telescope current_buffer_fuzzy_find" },
+			{ "<leader>fd", require("telescope.builtin").diagnostics, desc = "Telescope diagnostics" },
+			{ "<leader>fb", require("telescope.builtin").buffers, desc = "Telescope buffers" },
+			{ "<leader>fh", require("telescope.builtin").highlights, desc = "Telescope highlights" },
+			{ "<leader>fm", require("telescope.builtin").marks, desc = "Telescope marks" },
 		},
 		init = function()
 			vim.api.nvim_create_user_command(
@@ -42,5 +42,16 @@ return {
 		config = function()
 			require("telescope").load_extension("ui-select")
 		end
-	}
+	},
+    {
+        "matkrin/telescope-spell-errors.nvim",
+		dependencies = "nvim-telescope/telescope.nvim",
+		event = "VeryLazy",
+        config = function()
+            require("telescope").load_extension("spell_errors")
+        end,
+		keys = {
+			{ "<leader>fs", function() require("telescope").extensions.spell_errors.spell_errors() end, desc = "Telescope spelling errors" }
+		},
+    }
 }
