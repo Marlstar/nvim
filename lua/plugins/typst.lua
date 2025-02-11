@@ -2,7 +2,17 @@ return {
 	{
 		"kaarmu/typst.vim",
 		ft = "typst",
-		lazy = false
+		lazy = false,
+		config = function()
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "*.typ" },
+				callback = function()
+					vim.api.nvim_buf_set_keymap(0, "n", "j", "gj", {silent=true})
+					vim.api.nvim_buf_set_keymap(0, "n", "k", "gk", {silent=true})
+				end,
+				desc = "Go down softwrapped lines in typst files"
+			})
+		end
 	},
 	{
 		"chomosuke/typst-preview.nvim",
@@ -17,15 +27,6 @@ return {
 
 		config = function(_, opts)
 			require("typst-preview").setup(opts)
-			vim.api.nvim_create_autocmd("FileType", {
-				pattern = { "*.typ" },
-				callback = function()
-					vim.cmd("set sw=4")
-					vim.cmd("set tw=4")
-				end,
-				desc = "Reset tw and sw when entering typst files"
-			})
 		end,
-
 	}
 }
