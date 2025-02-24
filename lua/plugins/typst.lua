@@ -1,6 +1,6 @@
 return {
 	{
-		"kaarmu/typst.vim",
+		"Marlstar/typst.vim",
 		ft = "typst",
 		lazy = false,
 		config = function()
