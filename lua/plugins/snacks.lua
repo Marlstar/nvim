@@ -90,6 +90,11 @@ return {
 			enabled = true,
 		},
 
+		-- Scope
+		scope = {
+			enabled = true
+		},
+
 		-- Smooth scroll
 		scroll = {
 			enabled = true,
