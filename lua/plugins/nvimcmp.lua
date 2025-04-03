@@ -4,14 +4,14 @@ return {
 	version = false, -- use newest possible
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
+		-- "hrsh7th/cmp-nvim-lsp",
+		-- "hrsh7th/cmp-buffer",
+		-- "hrsh7th/cmp-path",
 		{ "hrsh7th/cmp-cmdline", event = "CmdlineEnter" },
-		{ "hrsh7th/cmp-nvim-lsp-document-symbol", event = "CmdlineEnter" },
-		"hrsh7th/cmp-calc",
+		-- { "hrsh7th/cmp-nvim-lsp-document-symbol", event = "CmdlineEnter" },
+		-- "hrsh7th/cmp-calc",
 
-		"zjp-CN/nvim-cmp-lsp-rs", -- Rust-Analyzer filtering and sorting
+		-- "zjp-CN/nvim-cmp-lsp-rs", -- Rust-Analyzer filtering and sorting
 
 		"onsails/lspkind.nvim", -- Item icons 
 	},
@@ -77,10 +77,10 @@ return {
 			--
 			-- "zjp-CN/nvim-cmp-lsp-rs" -- Rust-Analyzer filtering and sorting
 			sources = cmp.config.sources({
-				{ name = "lazydev" },
-				{ name = "nvim_lsp" },
-				{ name = "snippets" },
-				{ name = "path" },
+				-- { name = "lazydev" },
+				-- { name = "nvim_lsp" },
+				-- { name = "snippets" },
+				-- { name = "path" },
 				{ name = "calc" },
 			}, {
 				{ name = "buffer" },
