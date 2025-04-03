@@ -25,14 +25,14 @@ return {
 			vim.opt.signcolumn = "yes"
 		end,
 		config = function()
-			local lsp_defaults = require("lspconfig").util.default_config
+			-- local lsp_defaults = require("lspconfig").util.default_config
 
-			-- Add cmp_nvim_lsp capabilities
-			lsp_defaults.capabilities = vim.tbl_deep_extend(
-				"force",
-				lsp_defaults.capabilities,
-				require("cmp_nvim_lsp").default_capabilities()
-			)
+			-- -- Add cmp_nvim_lsp capabilities
+			-- lsp_defaults.capabilities = vim.tbl_deep_extend(
+			-- 	"force",
+			-- 	lsp_defaults.capabilities,
+			-- 	require("cmp_nvim_lsp").default_capabilities()
+			-- )
 
 			-- Stuff that only works when there is an active LSP
 			vim.api.nvim_create_autocmd("LspAttach", {
