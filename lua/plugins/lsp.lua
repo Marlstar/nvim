@@ -57,7 +57,6 @@ return {
 							local localopts = require("lspconfig." .. server_name)
 							local capabilities = require("blink.cmp").get_lsp_capabilities(require("lspconfig").util.default_config.capabilities)
 							local serveropts = vim.tbl_deep_extend("force", default_server_opts, localopts, {capabilities=capabilities})
-							Snacks.notify.notify(vim.inspect(serveropts),{})
 							require("lspconfig")[server_name]
 								.setup(serveropts)
 						else
