@@ -25,14 +25,7 @@ return {
 			vim.opt.signcolumn = "yes"
 		end,
 		config = function()
-			local lsp_defaults = require("lspconfig").util.default_config
-
-			-- Add cmp_nvim_lsp capabilities
-			lsp_defaults.capabilities = vim.tbl_deep_extend(
-				"force",
-				lsp_defaults.capabilities,
-				require("cmp_nvim_lsp").default_capabilities()
-			)
+			local lspconfig = require("lspconfig")
 
 			-- Stuff that only works when there is an active LSP
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -55,12 +48,18 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = ensure_installed,
+				automatic_installation = false, -- if mason should install servers that are configured
 				handlers = {
 					-- Handles all lsps
 					-- Custom configs are under `lspconfig.SERVER_NAME`
 					function(server_name)
 						if pcall(require, "lspconfig." .. server_name) then
-							require("lspconfig")[server_name].setup(require("lspconfig." .. server_name))
+							local localopts = require("lspconfig." .. server_name)
+							local capabilities = require("blink.cmp").get_lsp_capabilities(require("lspconfig").util.default_config.capabilities)
+							local serveropts = vim.tbl_deep_extend("force", default_server_opts, localopts, {capabilities=capabilities})
+							Snacks.notify.notify(vim.inspect(serveropts),{})
+							require("lspconfig")[server_name]
+								.setup(serveropts)
 						else
 							require("lspconfig")[server_name].setup(default_server_opts)
 						end
