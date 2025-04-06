@@ -8,5 +8,5 @@ vim.g.maplocalleader = "\\"
 require("lazy.run")
 
 vim.cmd("colorscheme tokyonight-moon")
-require("mappings")
+require("mappings").main()
 require("wsl")
