@@ -140,31 +140,32 @@ return {
 		{ "<leader>lg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
 
 		-- Picker
-		{ "<leader>ff", Snacks.picker.files, desc = "Picker - files" },
-		{ "<leader>fz", Snacks.picker.zoxide, desc = "Picker - directories (zoxide)" },
-		{ "<leader>fr", Snacks.picker.files, desc = "Picker - recent files" },
+		{ "<leader>ff", function() Snacks.picker.files() end, desc = "Picker - files" },
+		{ "<leader>fz", function() Snacks.picker.zoxide() end, desc = "Picker - directories (zoxide)" },
+		{ "<leader>fr", function() Snacks.picker.files() end, desc = "Picker - recent files" },
 
-		{ "<leader>fg", Snacks.picker.grep, desc = "Picker - grep" },
-		{ "<leader>fG", Snacks.picker.grep_word, desc = "Picker - grep current word" },
-		{ "<leader>fl", Snacks.picker.lines, desc = "Picker - lines (buffer)" },
-		{ "<leader>fh", Snacks.picker.search_history, desc = "Picker - search history" },
+		{ "<leader>fg", function() Snacks.picker.grep() end, desc = "Picker - grep" },
+		{ "<leader>fG", function() Snacks.picker.grep_word() end, desc = "Picker - grep current word" },
+		{ "<leader>fl", function() Snacks.picker.lines() end, desc = "Picker - lines (buffer)" },
+		{ "<leader>fh", function() Snacks.picker.search_history() end, desc = "Picker - search history" },
 
 		-- TODO: move lsp keybinds into picker
 		-- { "<leader>fl", Snacks.picker.lsp_references, desc = "Picker - LSP references" },
 
 		-- TODO: use picker notifications instead of <leader>nh
-		{ "<leader>fb", Snacks.picker.buffers, desc = "Picker - buffers" },
-		{ "<leader>fm", Snacks.picker.marks, desc = "Picker - marks" },
-		{ "<leader>fr", Snacks.picker.registers, desc = "Picker - registers" },
-		{ "<leader>fu", Snacks.picker.undo, desc = "Picker - undo tree" },
+		{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Picker - buffers" },
+		{ "<leader>fm", function() Snacks.picker.marks() end, desc = "Picker - marks" },
+		{ "<leader>fr", function() Snacks.picker.registers() end, desc = "Picker - registers" },
+		{ "<leader>fu", function() Snacks.picker.undo() end, desc = "Picker - undo tree" },
 
-		{ "<leader>fd", Snacks.picker.diagnostics, desc = "Picker - diagnostics" },
-		{ "<leader>fD", Snacks.picker.diagnostics_buffer, desc = "Picker - diagnostics (buffer)" },
-		{ "<leader>fq", Snacks.picker.qflist, desc = "Picker - quickfix" },
+		{ "<leader>fd", function() Snacks.picker.diagnostics() end, desc = "Picker - diagnostics" },
+		{ "<leader>fD", function() Snacks.picker.diagnostics_buffer() end, desc = "Picker - diagnostics (buffer)" },
+		{ "<leader>fq", function() Snacks.picker.qflist() end, desc = "Picker - quickfix" },
+		{ "<leader>nh", function() Snacks.picker.notifications() end, desc = "Picker - notification history" },
 
 		-- Misc
-		{ "<leader>fh", Snacks.picker.highlights, desc = "Picker - highlights" },
-		{ "<leader>fi", Snacks.picker.icons, desc = "Picker - Nerd Font Icons" },
+		{ "<leader>fh", function() Snacks.picker.highlights() end, desc = "Picker - highlights" },
+		{ "<leader>fi", function() Snacks.picker.icons() end, desc = "Picker - Nerd Font Icons" },
 
 		-- Scratch
 		{ "<leader>sn", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
