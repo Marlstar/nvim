@@ -133,7 +133,7 @@ return {
 		{ "<leader>x", function() Snacks.bufdelete() end, desc = "Delete buffer" },
 
 		-- Notifier
-		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Show notification history" },
+		-- MOVED TO PICKER | { "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Show notification history" },
 		{ "<leader>nc", function() Snacks.notifier.hide() end, desc = "Hide notifications" },
 
 		-- LazyGit
@@ -152,7 +152,6 @@ return {
 		-- TODO: move lsp keybinds into picker
 		-- { "<leader>fl", Snacks.picker.lsp_references, desc = "Picker - LSP references" },
 
-		-- TODO: use picker notifications instead of <leader>nh
 		{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Picker - buffers" },
 		{ "<leader>fm", function() Snacks.picker.marks() end, desc = "Picker - marks" },
 		{ "<leader>fr", function() Snacks.picker.registers() end, desc = "Picker - registers" },
