@@ -34,6 +34,14 @@ return {
 			},
 		},
 
+		-- Better image.nvim
+		image = {
+			enabled = true,
+			math = {
+				enabled = false,
+			},
+		},
+
 		-- Pretty notifications
 		notifier = {
 			enabled = true,
