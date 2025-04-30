@@ -19,6 +19,6 @@ return {
 	},
 
 	keys = {
-		{ "<leader>ft", ":TodoTelescope<CR>", desc = "Todo-Comments Telescope", silent = true }
+		{ "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "Todo-Comments Telescope", silent = true }
 	}
 }
