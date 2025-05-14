@@ -49,6 +49,11 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = ensure_installed,
 				automatic_installation = false, -- if mason should install servers that are configured
+				automatic_enable = {
+					exclude = {
+						"rust_analyzer",
+					},
+				},
 				handlers = {
 					-- Handles all lsps
 					-- Custom configs are under `lspconfig.SERVER_NAME`
