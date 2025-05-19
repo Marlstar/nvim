@@ -1,8 +1,11 @@
 return {
 	{
-		"Marlstar/typst.vim",
+		"kaarmu/typst.vim",
 		ft = "typst",
 		lazy = false,
+		init = function()
+			vim.g.typst_recommended_style = 0
+		end,
 	},
 	{
 		"chomosuke/typst-preview.nvim",
