@@ -12,7 +12,7 @@ return {
 			kind = "floating",
 		},
 		keys = {
-			{ "<leader>g", function() require("neogit").open() end, "Open Neogit" },
+			{ "<leader>go", function() require("neogit").open() end, "Open Neogit" },
 		}
 	}
 }
