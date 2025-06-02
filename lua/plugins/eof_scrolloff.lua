@@ -3,5 +3,6 @@ return {
 	event = { "CursorMoved", "WinScrolled" },
 	opts = {
 		insert_mode = true,
+		disabled_filetypes = { "lazy" },
 	},
 }
