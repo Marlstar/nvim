@@ -51,7 +51,7 @@ return {
             require("telescope").load_extension("spell_errors")
         end,
 		keys = {
-			{ "<leader>fs", function() require("telescope").extensions.spell_errors.spell_errors() end, desc = "Telescope spelling errors" }
+			{ "<leader>fS", function() require("telescope").extensions.spell_errors.spell_errors() end, desc = "Telescope spelling errors" }
 		},
     }
 }

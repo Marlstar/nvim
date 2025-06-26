@@ -168,6 +168,7 @@ return {
 		{ "<leader>fd", function() Snacks.picker.diagnostics() end, desc = "Picker - diagnostics" },
 		{ "<leader>fD", function() Snacks.picker.diagnostics_buffer() end, desc = "Picker - diagnostics (buffer)" },
 		{ "<leader>fq", function() Snacks.picker.qflist() end, desc = "Picker - quickfix" },
+		{ "<leader>fs", function() Snacks.picker.lsp_symbols() end, desc = "Picker - lsp symbols" },
 		{ "<leader>nh", function() Snacks.picker.notifications() end, desc = "Picker - notification history" },
 
 		-- Misc
