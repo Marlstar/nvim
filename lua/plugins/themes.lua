@@ -12,4 +12,9 @@ return {
 			comments = { italic = theme_opts.italic_comments },
 		},
 	},
+	{ -- catppuccin
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000
+	},
 }
