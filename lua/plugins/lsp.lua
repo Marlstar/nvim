@@ -48,28 +48,11 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = ensure_installed,
-				automatic_installation = false, -- if mason should install servers that are configured
 				automatic_enable = {
 					exclude = {
 						"rust_analyzer",
 					},
 				},
-				handlers = {
-					-- Handles all lsps
-					-- Custom configs are under `lspconfig.SERVER_NAME`
-					function(server_name)
-						local capabilities = require("blink.cmp").get_lsp_capabilities(require("lspconfig").util.default_config.capabilities)
-						if pcall(require, "lspconfig." .. server_name) then
-							local localopts = require("lspconfig." .. server_name)
-							local serveropts = vim.tbl_deep_extend("force", default_server_opts, localopts, {capabilities=capabilities})
-							require("lspconfig")[server_name]
-								.setup(serveropts)
-						else
-							local serveropts = vim.tbl_deep_extend("force", default_server_opts, {capabilities=capabilities})
-							require("lspconfig")[server_name].setup(serveropts)
-						end
-					end,
-				}
 			})
 		end
 	}
