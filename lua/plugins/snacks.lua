@@ -267,5 +267,10 @@ return {
 			function() Snacks.rename.rename_file() end,
 			{ nargs = 0 }
 		)
+
+		--------------
+		--   Term   --
+		--------------
+		vim.env.INSIDE_NEOVIM_FISH = 1
 	end
 }
