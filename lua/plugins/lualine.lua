@@ -16,7 +16,8 @@ return {
 					"󰑊",
 					color = { fg = "red" }
 				} },
-				"filetype"
+				"lsp_status",
+				"filetype",
 			},
 		},
 	}
