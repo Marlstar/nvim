@@ -202,9 +202,6 @@ return {
 			{ nargs = 0 }
 		)
 
-		-- LSP progress notifications
-		require("util.lsp_progress_notification")
-
 		---------------
 		--    Git    --
 		---------------
