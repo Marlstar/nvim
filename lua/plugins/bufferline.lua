@@ -16,9 +16,9 @@ return {
 		}
 	},
 	keys = {
-		{ "<leader>bn", ":BufferLineCycleNext<CR>", desc = "Next tab", silent = true },
-		{ "<leader>bp", ":BufferLineCyclePrev<CR>", desc = "Previous tab", silent = true },
-		{ "<leader>bmn", ":BufferLineMoveNext<CR>", desc = "Move tab right", silent = true },
-		{ "<leader>bmp", ":BufferLineMovePrev<CR>", desc = "Move tab left", silent = true },
+		{ "<leader><Tab>", function() require("bufferline").cycle(1) end, desc = "Next tab", silent = true },
+		{ "<leader><BS>", function() require("bufferline").cycle(-1) end, desc = "Previous tab", silent = true },
+		{ "<leader><S-Tab>", function() require("bufferline").move(1) end, desc = "Move tab right", silent = true },
+		{ "<leader><S-BS>", function() require("bufferline").move(-1) end, desc = "Move tab left", silent = true },
 	}
 }
