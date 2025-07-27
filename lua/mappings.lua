@@ -16,7 +16,8 @@ end
 
 
 function M.main()
-	map({"n","v"}, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
-	map({"n","v"}, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+	map({"n","v","x"}, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
+	map({"n","v","x"}, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+	map({"n","v","x"}, "<leader>d", '"+d', { desc = "Delete to system clipboard" })
 end
 return M
