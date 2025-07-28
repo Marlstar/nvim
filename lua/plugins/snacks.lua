@@ -157,8 +157,7 @@ return {
 		{ "<leader>fl", function() Snacks.picker.lines() end, desc = "Picker - lines (buffer)" },
 		{ "<leader>fh", function() Snacks.picker.search_history() end, desc = "Picker - search history" },
 
-		-- TODO: move lsp keybinds into picker
-		-- { "<leader>fl", Snacks.picker.lsp_references, desc = "Picker - LSP references" },
+		{ "gr", function() Snacks.picker.lsp_references() end, desc = "Picker - LSP references" },
 
 		{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Picker - buffers" },
 		{ "<leader>fm", function() Snacks.picker.marks() end, desc = "Picker - marks" },
