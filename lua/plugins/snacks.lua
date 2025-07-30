@@ -110,7 +110,7 @@ return {
 
 		-- Smooth scroll
 		scroll = {
-			enabled = true,
+			-- enabled = true,
 			animate = {
 				duration = { step = 15, total = 150 }
 			},
