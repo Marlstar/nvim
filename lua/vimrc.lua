@@ -28,3 +28,5 @@ vim.o.ruler = true -- Line and column numbers on the status line
 local font = "JetbrainsMono Nerd Font"
 vim.o.guifont = font
 vim.g.guifont = font
+
+vim.o.winborder = "rounded" -- Rounded borders by default for windows
