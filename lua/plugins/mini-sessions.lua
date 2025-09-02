@@ -1,5 +1,5 @@
 return {
-	'echasnovski/mini.sessions',
+	'nvim-mini/mini.sessions',
 	version = '*',
 	opts = {
 		directory = vim.fn.stdpath("data") .. "/sessions"
