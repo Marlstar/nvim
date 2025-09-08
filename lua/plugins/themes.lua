@@ -17,4 +17,12 @@ return {
 		name = "catppuccin",
 		priority = 1000
 	},
+	{
+		"darianmorat/gruvdark.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = true,
+		},
+	},
 }
