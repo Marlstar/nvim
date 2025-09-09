@@ -1,5 +1,6 @@
 local ensure_installed = {
-	"rust_analyzer",
+	-- Rustaceanvim uses system install
+	-- "rust_analyzer",
 	"lua_ls",
 	"tinymist",
 }
