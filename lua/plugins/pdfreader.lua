@@ -1,6 +1,6 @@
 return {
 	"r-pletnev/pdfreader.nvim",
-	lazy = false,
+	event = "VeryLazy",
 	dependencies = {
 		"folke/snacks.nvim", -- image rendering
 		"nvim-telescope/telescope.nvim", -- pickers
