@@ -11,7 +11,7 @@ local default_server_opts = {
 
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {}
 	},
 	{
@@ -19,8 +19,8 @@ return {
 		cmd = { "LspInfo", "LspInstall","LspStart" },
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 		},
 		init = function()
 			vim.opt.signcolumn = "yes"
