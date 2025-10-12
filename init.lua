@@ -7,6 +7,7 @@ vim.g.maplocalleader = "\\"
 
 require("lazy.run")
 
+require("filetype")
 require("colour")
 require("mappings").main()
 require("wsl")
