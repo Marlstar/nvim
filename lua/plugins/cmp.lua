@@ -20,6 +20,7 @@ return {
 
 			-- nvim-cmp sources
 			"hrsh7th/cmp-calc",
+			"yus-works/csc.nvim",
 
 			-- appearance
 			"nvim-tree/nvim-web-devicons",
@@ -56,6 +57,11 @@ return {
 
 					calc = { -- cmp-calc
 						name = "calc",
+						module = "blink.compat.source",
+					},
+
+					csc = {
+						name = "csc",
 						module = "blink.compat.source",
 					},
 				},
