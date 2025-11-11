@@ -4,6 +4,7 @@ return {
 	opts = {
 		directory = vim.fn.stdpath("data") .. "/sessions"
 	},
+	enabled = false,
 	init = function()
 		-- Commands to manage sessions, rather than having to type lua manually
 		vim.api.nvim_create_user_command(

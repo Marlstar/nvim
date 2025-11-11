@@ -13,9 +13,9 @@ return {
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 					{ icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
 					{ icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-					{ icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
-					{ icon = " ", key = "S", desc = "Sessions", action = ":Sessions" },
+					-- { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+					{ icon = " ", key = "s", desc = "Restore session", action = ":lua require('restoration').load({latest=true})" },
+					{ icon = " ", key = "S", desc = "Sessions", action = ":lua require('restoration').select()" },
 					{ icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				}
@@ -175,8 +175,8 @@ return {
 		{ "<leader>fi", function() Snacks.picker.icons() end, desc = "Picker - Nerd Font Icons" },
 
 		-- Scratch
-		{ "<leader>sn", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
-		{ "<leader>ss", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
+		{ "<leader>Sn", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+		{ "<leader>Ss", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
 
 		-- Terminal
 		{ "<C-\\>", function() Snacks.terminal.toggle(nil, {win={position="float"}}) end, mode = {"n","t"}, desc = "Toggle popup terminal" },
