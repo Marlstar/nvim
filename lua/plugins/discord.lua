@@ -23,10 +23,13 @@ return {
 				url = function(opts) return opts.repo_url or "https://github.com/Marlstar" end,
 			}
 		},
-		plugins = {
-			["cord.plugins.visibility"] = {
+		extensions = {
+			visibility = {
+				precedence = "blacklist",
 				rules = {
-					blacklist = {},
+					blacklist = {
+						"~/dev/work"
+					},
 					whitelist = {},
 				},
 			},
