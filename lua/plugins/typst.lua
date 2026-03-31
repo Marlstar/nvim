@@ -13,7 +13,8 @@ return {
 		version = "1.*",
 		opts = {
 			dependencies_bin = {
-				-- ["tinymist"] = vim.fn.stdpath("data") .. "/mason/bin/tinymist"
+				["tinymist"] = vim.fn.exepath("tinymist"),
+				["websocat"] = vim.fn.exepath("websocat"),
 			},
 			open_cmd = "firefox %s -P typst-preview --class typst-preview",
 		},
