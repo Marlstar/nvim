@@ -4,6 +4,9 @@ local ensure_installed = {
 	"lua_ls",
 	"tinymist",
 }
+if vim.env["NIX_USER_PROFILE_DIR"] ~= nil then
+	ensure_installed = {}
+end
 
 local default_server_opts = {
 
