@@ -28,6 +28,14 @@ return {
 		},
 		version = "1.*",
 
+		config = function(spec)
+			vim.lsp.config("*", {
+				capabilities = require("blink.cmp").get_lsp_capabilities()
+			})
+
+			require("blink.cmp").setup(spec.opts)
+		end,
+
 		opts = {
 			sources = {
 				default = {
