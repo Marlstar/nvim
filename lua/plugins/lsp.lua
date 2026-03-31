@@ -1,21 +1,26 @@
-local ensure_installed = {
-	-- Rustaceanvim uses system install
-	-- "rust_analyzer",
+local desired = {
+	-- Rustaceanvim does rust_analyzer
 	"lua_ls",
 	"tinymist",
 }
-if vim.env["NIX_USER_PROFILE_DIR"] ~= nil then
-	ensure_installed = {}
-end
 
-local default_server_opts = {
-
-}
+local IS_NIX = vim.env["NIX_USER_PROFILE_DIR"] ~= nil
+local ensure_installed = IS_NIX and {} or desired
+vim.lsp.enable(desired)
 
 return {
 	{
 		"mason-org/mason.nvim",
-		opts = {}
+		enabled = not IS_NIX,
+		opts = {},
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		enabled = not IS_NIX,
+		opts = {
+			ensure_installed = ensure_installed,
+			automatic_enable = false,
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -29,8 +34,6 @@ return {
 			vim.opt.signcolumn = "yes"
 		end,
 		config = function()
-			local lspconfig = require("lspconfig")
-
 			-- Stuff that only works when there is an active LSP
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
@@ -49,15 +52,6 @@ return {
 					vim.keymap.set({'n', 'x'}, '<F3>', function() vim.lsp.buf.format({async = true}) end, opts)
 					vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 				end
-			})
-
-			require("mason-lspconfig").setup({
-				ensure_installed = ensure_installed,
-				automatic_enable = {
-					exclude = {
-						"rust_analyzer",
-					},
-				},
 			})
 		end
 	}
